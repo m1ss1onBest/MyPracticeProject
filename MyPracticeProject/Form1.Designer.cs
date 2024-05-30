@@ -32,8 +32,8 @@
             this.labelMain = new System.Windows.Forms.Label();
             this.labelMainInfo = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.labelTextWindowsForms = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.labelLogoInfo = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.labelProjectInformation = new System.Windows.Forms.Label();
             this.labelInfo = new System.Windows.Forms.Label();
@@ -50,6 +50,7 @@
             this.textBoxEmail = new System.Windows.Forms.TextBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.textBoxPassword = new System.Windows.Forms.TextBox();
+            this.labelLogoInfo = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -80,8 +81,9 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.labelLogoInfo);
+            this.panel1.Controls.Add(this.labelTextWindowsForms);
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.labelProjectInformation);
             this.panel1.Controls.Add(this.labelInfo);
@@ -92,6 +94,17 @@
             this.panel1.Size = new System.Drawing.Size(424, 719);
             this.panel1.TabIndex = 2;
             // 
+            // labelTextWindowsForms
+            // 
+            this.labelTextWindowsForms.BackColor = System.Drawing.Color.Transparent;
+            this.labelTextWindowsForms.Font = new System.Drawing.Font("Leelawadee", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTextWindowsForms.ForeColor = System.Drawing.Color.Transparent;
+            this.labelTextWindowsForms.Location = new System.Drawing.Point(29, 405);
+            this.labelTextWindowsForms.Name = "labelTextWindowsForms";
+            this.labelTextWindowsForms.Size = new System.Drawing.Size(361, 49);
+            this.labelTextWindowsForms.TabIndex = 9;
+            this.labelTextWindowsForms.Text = "labelTextWindowsForms";
+            // 
             // label1
             // 
             this.label1.BackColor = System.Drawing.Color.Transparent;
@@ -101,31 +114,19 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(398, 34);
             this.label1.TabIndex = 8;
-            this.label1.Text = "_________________________________________________________________________________" + "___________________________";
+            this.label1.Text = "______________________________________________________________";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // labelLogoInfo
-            // 
-            this.labelLogoInfo.BackColor = System.Drawing.Color.Transparent;
-            this.labelLogoInfo.Font = new System.Drawing.Font("e-Ukraine Head", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelLogoInfo.ForeColor = System.Drawing.Color.Transparent;
-            this.labelLogoInfo.Location = new System.Drawing.Point(80, 670);
-            this.labelLogoInfo.Name = "labelLogoInfo";
-            this.labelLogoInfo.Size = new System.Drawing.Size(252, 22);
-            this.labelLogoInfo.TabIndex = 7;
-            this.labelLogoInfo.Text = "моё фио";
-            this.labelLogoInfo.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // label2
             // 
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("e-Ukraine Head", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label2.ForeColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(80, 680);
+            this.label2.Location = new System.Drawing.Point(80, 676);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(252, 34);
             this.label2.TabIndex = 6;
-            this.label2.Text = "____________________________________";
+            this.label2.Text = "_______________________________________________";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // labelProjectInformation
@@ -133,11 +134,12 @@
             this.labelProjectInformation.BackColor = System.Drawing.Color.Transparent;
             this.labelProjectInformation.Font = new System.Drawing.Font("e-Ukraine Head", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelProjectInformation.ForeColor = System.Drawing.Color.Transparent;
-            this.labelProjectInformation.Location = new System.Drawing.Point(27, 360);
+            this.labelProjectInformation.Location = new System.Drawing.Point(29, 361);
             this.labelProjectInformation.Name = "labelProjectInformation";
-            this.labelProjectInformation.Size = new System.Drawing.Size(361, 192);
+            this.labelProjectInformation.Size = new System.Drawing.Size(361, 44);
             this.labelProjectInformation.TabIndex = 4;
             this.labelProjectInformation.Text = "labelProjectInformation";
+            this.labelProjectInformation.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // labelInfo
             // 
@@ -164,7 +166,7 @@
             // labelPassword
             // 
             this.labelPassword.Font = new System.Drawing.Font("e-Ukraine Head", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelPassword.Location = new System.Drawing.Point(430, 399);
+            this.labelPassword.Location = new System.Drawing.Point(430, 361);
             this.labelPassword.Name = "labelPassword";
             this.labelPassword.Size = new System.Drawing.Size(424, 32);
             this.labelPassword.TabIndex = 6;
@@ -216,7 +218,7 @@
             // labelEmail
             // 
             this.labelEmail.Font = new System.Drawing.Font("e-Ukraine Head", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelEmail.Location = new System.Drawing.Point(430, 271);
+            this.labelEmail.Location = new System.Drawing.Point(430, 250);
             this.labelEmail.Name = "labelEmail";
             this.labelEmail.Size = new System.Drawing.Size(424, 32);
             this.labelEmail.TabIndex = 10;
@@ -241,6 +243,7 @@
             this.textBoxUserName.Name = "textBoxUserName";
             this.textBoxUserName.Size = new System.Drawing.Size(292, 33);
             this.textBoxUserName.TabIndex = 17;
+            this.textBoxUserName.Text = "textBoxUserName";
             this.textBoxUserName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // pictureBox1
@@ -257,7 +260,7 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
-            this.pictureBox2.Location = new System.Drawing.Point(497, 337);
+            this.pictureBox2.Location = new System.Drawing.Point(497, 316);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(292, 42);
             this.pictureBox2.TabIndex = 20;
@@ -266,17 +269,18 @@
             // textBoxEmail
             // 
             this.textBoxEmail.Font = new System.Drawing.Font("e-Ukraine Head", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxEmail.Location = new System.Drawing.Point(497, 306);
+            this.textBoxEmail.Location = new System.Drawing.Point(497, 285);
             this.textBoxEmail.Name = "textBoxEmail";
             this.textBoxEmail.Size = new System.Drawing.Size(292, 33);
             this.textBoxEmail.TabIndex = 19;
+            this.textBoxEmail.Text = "textBoxEmail";
             this.textBoxEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
-            this.pictureBox3.Location = new System.Drawing.Point(497, 465);
+            this.pictureBox3.Location = new System.Drawing.Point(497, 427);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(292, 42);
             this.pictureBox3.TabIndex = 22;
@@ -285,11 +289,24 @@
             // textBoxPassword
             // 
             this.textBoxPassword.Font = new System.Drawing.Font("e-Ukraine Head", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxPassword.Location = new System.Drawing.Point(497, 434);
+            this.textBoxPassword.Location = new System.Drawing.Point(497, 396);
             this.textBoxPassword.Name = "textBoxPassword";
             this.textBoxPassword.Size = new System.Drawing.Size(292, 33);
             this.textBoxPassword.TabIndex = 21;
+            this.textBoxPassword.Text = "textBoxPassword";
             this.textBoxPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // labelLogoInfo
+            // 
+            this.labelLogoInfo.BackColor = System.Drawing.Color.Transparent;
+            this.labelLogoInfo.Font = new System.Drawing.Font("e-Ukraine Head", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelLogoInfo.ForeColor = System.Drawing.Color.Transparent;
+            this.labelLogoInfo.Location = new System.Drawing.Point(80, 665);
+            this.labelLogoInfo.Name = "labelLogoInfo";
+            this.labelLogoInfo.Size = new System.Drawing.Size(252, 22);
+            this.labelLogoInfo.TabIndex = 11;
+            this.labelLogoInfo.Text = "labelLogoInfo";
+            this.labelLogoInfo.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
             // Form1
             // 
@@ -328,6 +345,10 @@
             this.ResumeLayout(false);
             this.PerformLayout();
         }
+
+        private System.Windows.Forms.Label label4;
+
+        private System.Windows.Forms.Label labelTextWindowsForms;
 
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.TextBox textBoxEmail;
