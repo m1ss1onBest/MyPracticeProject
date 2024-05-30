@@ -1,0 +1,11 @@
+D:\mwp\cs-practice\MyPracticeProject\MyPracticeProject\bin\Debug\MyPracticeProject.exe.config
+D:\mwp\cs-practice\MyPracticeProject\MyPracticeProject\bin\Debug\MyPracticeProject.pdb
+D:\mwp\cs-practice\MyPracticeProject\MyPracticeProject\obj\Debug\MyPracticeProject.csproj.AssemblyReference.cache
+D:\mwp\cs-practice\MyPracticeProject\MyPracticeProject\obj\Debug\MyPracticeProject.Properties.Resources.resources
+D:\mwp\cs-practice\MyPracticeProject\MyPracticeProject\obj\Debug\MyPracticeProject.csproj.GenerateResource.cache
+D:\mwp\cs-practice\MyPracticeProject\MyPracticeProject\obj\Debug\MyPracticeProject.csproj.CoreCompileInputs.cache
+D:\mwp\cs-practice\MyPracticeProject\MyPracticeProject\obj\Debug\MyPracticeProject.exe
+D:\mwp\cs-practice\MyPracticeProject\MyPracticeProject\obj\Debug\MyPracticeProject.pdb
+D:\mwp\cs-practice\MyPracticeProject\MyPracticeProject\obj\Debug\MyPracticeProject.Form1.resources
+D:\mwp\cs-practice\MyPracticeProject\MyPracticeProject\obj\Debug\MyPracticeProject.CustomTextBox.resources
+D:\mwp\cs-practice\MyPracticeProject\MyPracticeProject\obj\Debug\MyPracti.B9520A4A.Up2Date
