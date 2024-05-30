@@ -32,16 +32,20 @@
             this.labelMain = new System.Windows.Forms.Label();
             this.labelMainInfo = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.labelProjectInformation = new System.Windows.Forms.Label();
             this.label_INFO = new System.Windows.Forms.Label();
             this.pictureBoxLineUnder = new System.Windows.Forms.PictureBox();
             this.labelLogoInfo = new System.Windows.Forms.Label();
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
-            this.labelUserName = new System.Windows.Forms.Label();
             this.customTextBoxUserName = new MyPracticeProject.CustomTextBox();
             this.customTextBoxUserPassword = new MyPracticeProject.CustomTextBox();
             this.labelPassword = new System.Windows.Forms.Label();
             this.buttonLogIn = new System.Windows.Forms.Button();
             this.buttonAsGuest = new System.Windows.Forms.Button();
+            this.labelUserName = new System.Windows.Forms.Label();
+            this.customTextBox1 = new MyPracticeProject.CustomTextBox();
+            this.labelEmail = new System.Windows.Forms.Label();
+            this.checkBoxAgree = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLineUnder)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
@@ -70,6 +74,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(135)))), ((int)(((byte)(192)))));
+            this.panel1.Controls.Add(this.labelProjectInformation);
             this.panel1.Controls.Add(this.label_INFO);
             this.panel1.Controls.Add(this.pictureBoxLineUnder);
             this.panel1.Controls.Add(this.labelLogoInfo);
@@ -80,16 +85,26 @@
             this.panel1.Size = new System.Drawing.Size(424, 719);
             this.panel1.TabIndex = 2;
             // 
+            // labelProjectInformation
+            // 
+            this.labelProjectInformation.Font = new System.Drawing.Font("e-Ukraine Head", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelProjectInformation.ForeColor = System.Drawing.Color.White;
+            this.labelProjectInformation.Location = new System.Drawing.Point(45, 436);
+            this.labelProjectInformation.Name = "labelProjectInformation";
+            this.labelProjectInformation.Size = new System.Drawing.Size(333, 237);
+            this.labelProjectInformation.TabIndex = 4;
+            this.labelProjectInformation.Text = "labelProjectInformation";
+            // 
             // label_INFO
             // 
             this.label_INFO.Font = new System.Drawing.Font("e-Ukraine Head", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label_INFO.ForeColor = System.Drawing.Color.White;
-            this.label_INFO.Location = new System.Drawing.Point(45, 9);
+            this.label_INFO.Location = new System.Drawing.Point(80, 9);
             this.label_INFO.Name = "label_INFO";
             this.label_INFO.Size = new System.Drawing.Size(252, 46);
             this.label_INFO.TabIndex = 3;
             this.label_INFO.Text = "label_INFO";
-            this.label_INFO.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label_INFO.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBoxLineUnder
             // 
@@ -106,36 +121,26 @@
             this.labelLogoInfo.ForeColor = System.Drawing.Color.White;
             this.labelLogoInfo.Location = new System.Drawing.Point(45, 324);
             this.labelLogoInfo.Name = "labelLogoInfo";
-            this.labelLogoInfo.Size = new System.Drawing.Size(333, 309);
+            this.labelLogoInfo.Size = new System.Drawing.Size(333, 112);
             this.labelLogoInfo.TabIndex = 3;
             this.labelLogoInfo.Text = "labelLogoInfo";
             // 
             // pictureBoxLogo
             // 
             this.pictureBoxLogo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxLogo.BackgroundImage")));
-            this.pictureBoxLogo.Location = new System.Drawing.Point(84, 57);
+            this.pictureBoxLogo.Location = new System.Drawing.Point(80, 58);
             this.pictureBoxLogo.Name = "pictureBoxLogo";
             this.pictureBoxLogo.Size = new System.Drawing.Size(252, 247);
             this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBoxLogo.TabIndex = 3;
             this.pictureBoxLogo.TabStop = false;
             // 
-            // labelUserName
-            // 
-            this.labelUserName.Font = new System.Drawing.Font("e-Ukraine Head", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelUserName.Location = new System.Drawing.Point(430, 169);
-            this.labelUserName.Name = "labelUserName";
-            this.labelUserName.Size = new System.Drawing.Size(424, 32);
-            this.labelUserName.TabIndex = 4;
-            this.labelUserName.Text = "labelUserName";
-            this.labelUserName.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            // 
             // customTextBoxUserName
             // 
             this.customTextBoxUserName.BorderColor = System.Drawing.Color.Black;
             this.customTextBoxUserName.BorderSize = 3;
             this.customTextBoxUserName.Font = new System.Drawing.Font("e-Ukraine Head", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.customTextBoxUserName.Location = new System.Drawing.Point(498, 216);
+            this.customTextBoxUserName.Location = new System.Drawing.Point(498, 197);
             this.customTextBoxUserName.Name = "customTextBoxUserName";
             this.customTextBoxUserName.Padding = new System.Windows.Forms.Padding(7);
             this.customTextBoxUserName.PasswordChar = '\0';
@@ -148,7 +153,7 @@
             this.customTextBoxUserPassword.BorderColor = System.Drawing.Color.Black;
             this.customTextBoxUserPassword.BorderSize = 3;
             this.customTextBoxUserPassword.Font = new System.Drawing.Font("e-Ukraine Head", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.customTextBoxUserPassword.Location = new System.Drawing.Point(498, 319);
+            this.customTextBoxUserPassword.Location = new System.Drawing.Point(498, 373);
             this.customTextBoxUserPassword.Name = "customTextBoxUserPassword";
             this.customTextBoxUserPassword.Padding = new System.Windows.Forms.Padding(7);
             this.customTextBoxUserPassword.PasswordChar = '\0';
@@ -159,7 +164,7 @@
             // labelPassword
             // 
             this.labelPassword.Font = new System.Drawing.Font("e-Ukraine Head", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelPassword.Location = new System.Drawing.Point(430, 272);
+            this.labelPassword.Location = new System.Drawing.Point(430, 326);
             this.labelPassword.Name = "labelPassword";
             this.labelPassword.Size = new System.Drawing.Size(424, 32);
             this.labelPassword.TabIndex = 6;
@@ -174,7 +179,7 @@
             this.buttonLogIn.Font = new System.Drawing.Font("e-Ukraine Head", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonLogIn.ForeColor = System.Drawing.Color.White;
             this.buttonLogIn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.buttonLogIn.Location = new System.Drawing.Point(498, 529);
+            this.buttonLogIn.Location = new System.Drawing.Point(498, 564);
             this.buttonLogIn.Name = "buttonLogIn";
             this.buttonLogIn.Size = new System.Drawing.Size(291, 64);
             this.buttonLogIn.TabIndex = 8;
@@ -189,7 +194,7 @@
             this.buttonAsGuest.Font = new System.Drawing.Font("e-Ukraine Head", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonAsGuest.ForeColor = System.Drawing.Color.MediumAquamarine;
             this.buttonAsGuest.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.buttonAsGuest.Location = new System.Drawing.Point(498, 599);
+            this.buttonAsGuest.Location = new System.Drawing.Point(498, 634);
             this.buttonAsGuest.Name = "buttonAsGuest";
             this.buttonAsGuest.Size = new System.Drawing.Size(123, 26);
             this.buttonAsGuest.TabIndex = 9;
@@ -197,17 +202,64 @@
             this.buttonAsGuest.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.buttonAsGuest.UseVisualStyleBackColor = false;
             // 
+            // labelUserName
+            // 
+            this.labelUserName.Font = new System.Drawing.Font("e-Ukraine Head", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelUserName.Location = new System.Drawing.Point(430, 150);
+            this.labelUserName.Name = "labelUserName";
+            this.labelUserName.Size = new System.Drawing.Size(424, 32);
+            this.labelUserName.TabIndex = 4;
+            this.labelUserName.Text = "labelUserName";
+            this.labelUserName.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            // 
+            // customTextBox1
+            // 
+            this.customTextBox1.BorderColor = System.Drawing.Color.Black;
+            this.customTextBox1.BorderSize = 3;
+            this.customTextBox1.Font = new System.Drawing.Font("e-Ukraine Head", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.customTextBox1.Location = new System.Drawing.Point(498, 285);
+            this.customTextBox1.Name = "customTextBox1";
+            this.customTextBox1.Padding = new System.Windows.Forms.Padding(7);
+            this.customTextBox1.PasswordChar = '\0';
+            this.customTextBox1.Size = new System.Drawing.Size(291, 38);
+            this.customTextBox1.TabIndex = 11;
+            this.customTextBox1.Underlined = true;
+            // 
+            // labelEmail
+            // 
+            this.labelEmail.Font = new System.Drawing.Font("e-Ukraine Head", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelEmail.Location = new System.Drawing.Point(430, 238);
+            this.labelEmail.Name = "labelEmail";
+            this.labelEmail.Size = new System.Drawing.Size(424, 32);
+            this.labelEmail.TabIndex = 10;
+            this.labelEmail.Text = "labelEmail";
+            this.labelEmail.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            // 
+            // checkBoxAgree
+            // 
+            this.checkBoxAgree.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.checkBoxAgree.Font = new System.Drawing.Font("e-Ukraine Head", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.checkBoxAgree.Location = new System.Drawing.Point(498, 539);
+            this.checkBoxAgree.Name = "checkBoxAgree";
+            this.checkBoxAgree.Size = new System.Drawing.Size(144, 19);
+            this.checkBoxAgree.TabIndex = 12;
+            this.checkBoxAgree.Text = "checkBoxAgree";
+            this.checkBoxAgree.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(866, 719);
+            this.Controls.Add(this.checkBoxAgree);
+            this.Controls.Add(this.customTextBox1);
+            this.Controls.Add(this.labelEmail);
             this.Controls.Add(this.buttonAsGuest);
             this.Controls.Add(this.buttonLogIn);
             this.Controls.Add(this.customTextBoxUserPassword);
-            this.Controls.Add(this.labelPassword);
             this.Controls.Add(this.customTextBoxUserName);
+            this.Controls.Add(this.labelPassword);
             this.Controls.Add(this.labelUserName);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.labelMainInfo);
@@ -225,6 +277,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             this.ResumeLayout(false);
         }
+
+        private System.Windows.Forms.CheckBox checkBoxAgree;
+
+        private System.Windows.Forms.Label labelEmail;
+        private MyPracticeProject.CustomTextBox customTextBox1;
+
+        private System.Windows.Forms.Label labelProjectInformation;
 
         private System.Windows.Forms.Button buttonAsGuest;
 
