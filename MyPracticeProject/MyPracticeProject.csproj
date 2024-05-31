@@ -51,6 +51,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data.cs" />
+    <Compile Include="FormPasswordGenerator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPasswordGenerator.Designer.cs">
+      <DependentUpon>FormPasswordGenerator.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormRegistration.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,6 +79,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormManager.resx">
       <DependentUpon>FormManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPasswordGenerator.resx">
+      <DependentUpon>FormPasswordGenerator.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormRegistration.resx">
       <DependentUpon>FormRegistration.cs</DependentUpon>

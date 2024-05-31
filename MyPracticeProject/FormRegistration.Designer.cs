@@ -97,9 +97,9 @@
             this.labelLogoInfo.BackColor = System.Drawing.Color.Transparent;
             this.labelLogoInfo.Font = new System.Drawing.Font("e-Ukraine Head", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelLogoInfo.ForeColor = System.Drawing.Color.Transparent;
-            this.labelLogoInfo.Location = new System.Drawing.Point(80, 665);
+            this.labelLogoInfo.Location = new System.Drawing.Point(12, 665);
             this.labelLogoInfo.Name = "labelLogoInfo";
-            this.labelLogoInfo.Size = new System.Drawing.Size(252, 22);
+            this.labelLogoInfo.Size = new System.Drawing.Size(398, 22);
             this.labelLogoInfo.TabIndex = 11;
             this.labelLogoInfo.Text = "labelLogoInfo";
             this.labelLogoInfo.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -134,7 +134,7 @@
             this.label2.ForeColor = System.Drawing.Color.Transparent;
             this.label2.Location = new System.Drawing.Point(80, 676);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(252, 34);
+            this.label2.Size = new System.Drawing.Size(262, 34);
             this.label2.TabIndex = 6;
             this.label2.Text = "_______________________________________________";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -216,6 +216,7 @@
             this.buttonAsGuest.Text = "buttonAsGuest";
             this.buttonAsGuest.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.buttonAsGuest.UseVisualStyleBackColor = false;
+            this.buttonAsGuest.Click += new System.EventHandler(this.buttonAsGuest_Click);
             // 
             // labelEmail
             // 

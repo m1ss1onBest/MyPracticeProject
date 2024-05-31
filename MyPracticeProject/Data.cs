@@ -21,7 +21,16 @@ namespace MyPracticeProject
          public static readonly Color OrangeMedium = Color.FromArgb(255, 247, 174, 102);
          public static readonly Color OrangeDark = Color.FromArgb(255, 238, 145, 84);
       }
+      
+      
+      private const String Password = "5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8";
+      public static bool hasAcess = false;
+      public static string Email = "susamogus@gmail.com";
 
+      public static void ShowAccessRequired()
+      {
+         MessageBox.Show(@"У вас немає доступу до даного функцiоналу.", "Недостатнiй рiвень доступу", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+      }
       public static void SetError(TextBox textBox, PictureBox pictureBox, string message, Label textEdit = null)
       {
          pictureBox.Image = Image.FromFile(@"D:\mwp\cs-practice\MyPracticeProject\MyPracticeProject\assets\saved-line-error.png");
@@ -32,10 +41,6 @@ namespace MyPracticeProject
             textEdit.Text = message;
          }
       }
-
-      private const String Password = "5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8";
-      public static string UserName;
-      public static string Email = "susamogus@gmail.com";
       public static string HashPassword(string inputPassword)
       {
          using (SHA256 sha256 = SHA256.Create())

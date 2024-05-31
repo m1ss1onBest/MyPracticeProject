@@ -38,6 +38,7 @@ namespace MyPracticeProject
             this.операцiїToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.обчислитиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.очищенняЕкрануToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.вихiдToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.textBoxAngle = new System.Windows.Forms.TextBox();
             this.labelAngle = new System.Windows.Forms.Label();
@@ -51,7 +52,6 @@ namespace MyPracticeProject
             this.LabelSolutionInfo = new System.Windows.Forms.Label();
             this.labelSolutionDescription = new System.Windows.Forms.Label();
             this.pictureBoxKostyl = new System.Windows.Forms.PictureBox();
-            this.вихiдToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -87,6 +87,14 @@ namespace MyPracticeProject
             this.очищенняЕкрануToolStripMenuItem.Name = "очищенняЕкрануToolStripMenuItem";
             this.очищенняЕкрануToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.очищенняЕкрануToolStripMenuItem.Text = "Очищення екрану";
+            this.очищенняЕкрануToolStripMenuItem.Click += new System.EventHandler(this.очищенняЕкрануToolStripMenuItem_Click_1);
+            // 
+            // вихiдToolStripMenuItem
+            // 
+            this.вихiдToolStripMenuItem.Name = "вихiдToolStripMenuItem";
+            this.вихiдToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
+            this.вихiдToolStripMenuItem.Text = "Вихiд";
+            this.вихiдToolStripMenuItem.Click += new System.EventHandler(this.вихiдToolStripMenuItem_Click);
             // 
             // pictureBox1
             // 
@@ -251,12 +259,6 @@ namespace MyPracticeProject
             this.pictureBoxKostyl.TabIndex = 41;
             this.pictureBoxKostyl.TabStop = false;
             // 
-            // вихiдToolStripMenuItem
-            // 
-            this.вихiдToolStripMenuItem.Name = "вихiдToolStripMenuItem";
-            this.вихiдToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
-            this.вихiдToolStripMenuItem.Text = "Вихiд";
-            // 
             // FormSolution1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 13F);
@@ -284,6 +286,8 @@ namespace MyPracticeProject
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "FormSolution1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormSolution1_FormClosing);
             this.Load += new System.EventHandler(this.FormSolution1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

@@ -110,21 +110,25 @@ namespace MyPracticeProject
                 a = Math.Round(i * 180 / pi, digits_AFTER_COMMA);
                 b = Math.Round(Sin(i), digits_AFTER_COMMA);
                 chartGraph.Series[0].Points.AddXY(a, b);
-                listBoxValues.Items.Add($@"f({a}°) = {b}");
+                listBoxValues.Items.Add($@"f({Math.Round(a, 0)}°) = {b}");
             }
         }
 
         private void обчислитиToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            очищенняЕкрануToolStripMenuItem_Click(sender, e);
+            очищенняЕкрануToolStripMenuItem_Click_1(sender, e);
             Calculations();
             pictureBoxKostyl.Image = Image.FromFile(@"D:\mwp\cs-practice\MyPracticeProject\MyPracticeProject\assets\orange-kostyl1.png");
         }
 
-        private void очищенняЕкрануToolStripMenuItem_Click(object sender, EventArgs e)
+        private void очищенняЕкрануToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             chartGraph.Series[0].Points.Clear();
             listBoxValues.Items.Clear();
         }
+        
+        private void FormSolution1_FormClosing(object sender, FormClosingEventArgs e) => FormManager.Start();
+        private void вихiдToolStripMenuItem_Click(object sender, EventArgs e) => Close();
+
     }
 }

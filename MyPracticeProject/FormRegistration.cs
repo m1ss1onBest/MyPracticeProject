@@ -25,7 +25,7 @@ namespace MyPracticeProject
             //left part 
             labelMain.Text = @"Вхід у систему";
             labelMainInfo.Text = @"Для авторизації необхідно ввести персональні дані";
-            labelLogoInfo.Text = @"Моё ФИО, палить не хочу :D"; //Чабанюк Владислав ПІ-222
+            labelLogoInfo.Text = @"Чабанюк Владислав | ПІ-222";
             labelProjectInformation.Text = @"Виконання індивідуальних практичних завдань по C# з використанням";
             labelTextWindowsForms.Text = @"Windows forms";
             
@@ -49,7 +49,7 @@ namespace MyPracticeProject
             
             
             //TEST REGION
-            FormSolution1.Start();
+            // FormSolution1.Start();
         }
         
         private void SetDefault(TextBox textBox, PictureBox pictureBox, Label textEdit = null)
@@ -132,7 +132,6 @@ namespace MyPracticeProject
                 Data.SetError(textBoxPassword, pictureBoxPasswordLabel, "Пароль невірний", labelPasswordWarning);
                 acceptable = false;
             }
-
             if (Data.Email != textBoxEmail.Text)
             {
                 Data.SetError(textBoxEmail, pictureBoxEmailLabel, "Пошта не знайдена", labelEmailWarning);
@@ -147,7 +146,14 @@ namespace MyPracticeProject
             {
                 Visible = false;
                 FormManager.Start();
+                Data.hasAcess = true;
             }
+        }
+
+        private void buttonAsGuest_Click(object sender, EventArgs e)
+        {
+            Visible = false;
+            FormManager.Start();
         }
     }
 }
