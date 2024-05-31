@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Drawing;
+using System.Net.Mime;
 using System.Windows.Forms;
 
 namespace MyPracticeProject
@@ -115,7 +117,8 @@ namespace MyPracticeProject
         private void обчислитиToolStripMenuItem_Click(object sender, EventArgs e)
         {
             очищенняЕкрануToolStripMenuItem_Click(sender, e);
-            Calculations(); 
+            Calculations();
+            pictureBoxKostyl.Image = Image.FromFile(@"D:\mwp\cs-practice\MyPracticeProject\MyPracticeProject\assets\orange-kostyl1.png");
         }
 
         private void очищенняЕкрануToolStripMenuItem_Click(object sender, EventArgs e)

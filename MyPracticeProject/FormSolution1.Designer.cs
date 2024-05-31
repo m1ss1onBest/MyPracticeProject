@@ -54,10 +54,12 @@ namespace MyPracticeProject
             this.labelGraph = new System.Windows.Forms.Label();
             this.LabelSolutionInfo = new System.Windows.Forms.Label();
             this.labelSolutionDescription = new System.Windows.Forms.Label();
+            this.pictureBoxKostyl = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartGraph)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxKostyl)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -127,6 +129,7 @@ namespace MyPracticeProject
             // 
             // textBoxAngle
             // 
+            this.textBoxAngle.BackColor = System.Drawing.Color.LightGray;
             this.textBoxAngle.Font = new System.Drawing.Font("e-Ukraine Head", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxAngle.Location = new System.Drawing.Point(77, 164);
             this.textBoxAngle.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -161,6 +164,7 @@ namespace MyPracticeProject
             // 
             // textBoxDigits
             // 
+            this.textBoxDigits.BackColor = System.Drawing.Color.LightGray;
             this.textBoxDigits.Font = new System.Drawing.Font("e-Ukraine Head", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxDigits.Location = new System.Drawing.Point(77, 240);
             this.textBoxDigits.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -214,7 +218,7 @@ namespace MyPracticeProject
             this.chartGraph.BorderlineColor = System.Drawing.Color.Transparent;
             chartArea1.Name = "ChartArea1";
             this.chartGraph.ChartAreas.Add(chartArea1);
-            this.chartGraph.Location = new System.Drawing.Point(560, 230);
+            this.chartGraph.Location = new System.Drawing.Point(559, 252);
             this.chartGraph.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.chartGraph.Name = "chartGraph";
             this.chartGraph.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Fire;
@@ -244,6 +248,7 @@ namespace MyPracticeProject
             // 
             // LabelSolutionInfo
             // 
+            this.LabelSolutionInfo.BackColor = System.Drawing.Color.Transparent;
             this.LabelSolutionInfo.Font = new System.Drawing.Font("e-Ukraine Head", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.LabelSolutionInfo.Location = new System.Drawing.Point(13, 33);
             this.LabelSolutionInfo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -255,21 +260,33 @@ namespace MyPracticeProject
             // 
             // labelSolutionDescription
             // 
+            this.labelSolutionDescription.BackColor = System.Drawing.Color.Transparent;
             this.labelSolutionDescription.Font = new System.Drawing.Font("e-Ukraine Head", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelSolutionDescription.Location = new System.Drawing.Point(13, 316);
+            this.labelSolutionDescription.Location = new System.Drawing.Point(69, 316);
             this.labelSolutionDescription.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelSolutionDescription.Name = "labelSolutionDescription";
-            this.labelSolutionDescription.Size = new System.Drawing.Size(539, 187);
+            this.labelSolutionDescription.Size = new System.Drawing.Size(483, 187);
             this.labelSolutionDescription.TabIndex = 40;
             this.labelSolutionDescription.Text = "labelSolutionDescription";
             this.labelSolutionDescription.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pictureBoxKostyl
+            // 
+            this.pictureBoxKostyl.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxKostyl.BackgroundImage")));
+            this.pictureBoxKostyl.Location = new System.Drawing.Point(649, 513);
+            this.pictureBoxKostyl.Name = "pictureBoxKostyl";
+            this.pictureBoxKostyl.Size = new System.Drawing.Size(274, 41);
+            this.pictureBoxKostyl.TabIndex = 41;
+            this.pictureBoxKostyl.TabStop = false;
             // 
             // FormSolution1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(994, 571);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(994, 593);
+            this.Controls.Add(this.pictureBoxKostyl);
             this.Controls.Add(this.labelSolutionDescription);
             this.Controls.Add(this.LabelSolutionInfo);
             this.Controls.Add(this.labelGraph);
@@ -295,9 +312,12 @@ namespace MyPracticeProject
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartGraph)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxKostyl)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
         }
+
+        private System.Windows.Forms.PictureBox pictureBoxKostyl;
 
         private System.Windows.Forms.Label LabelSolutionInfo;
 
