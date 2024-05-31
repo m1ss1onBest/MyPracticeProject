@@ -22,14 +22,13 @@ namespace MyPracticeProject
             labelInfo.Text = @"Проєкт";
             panel1.BackColor = Data.Pal.RegisterFormColor;
             
-            //left part
+            //left part 
             labelMain.Text = @"Вхід у систему";
             labelMainInfo.Text = @"Для авторизації необхідно ввести персональні дані";
             labelLogoInfo.Text = @"Моё ФИО, палить не хочу :D"; //Чабанюк Владислав ПІ-222
             labelProjectInformation.Text = @"Виконання індивідуальних практичних завдань по C# з використанням";
             labelTextWindowsForms.Text = @"Windows forms";
             
-            labelUserName.Text = @"Ім'я Користувача";
             labelEmail.Text = @"Е-пошта";
             labelPassword.Text = @"Пароль";
             
@@ -45,21 +44,12 @@ namespace MyPracticeProject
             buttonAsGuest.ForeColor = Data.Pal.SuccessColor;
 
             //textBox design
-            textBoxUserName.BorderStyle = textBoxEmail.BorderStyle = textBoxPassword.BorderStyle = BorderStyle.None;
             textBoxPassword.PasswordChar = '•';
-            textBoxUserName.Text = textBoxEmail.Text = textBoxPassword.Text = "";
+            textBoxEmail.Text = textBoxPassword.Text = "";
             
             
             //TEST REGION
             FormSolution1.Start();
-        }
-
-        private void textBoxUserName_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar != (int)Keys.Back && textBoxUserName.Text.Length >= 23) 
-            {
-                e.Handled = true;
-            }
         }
         
         private void SetDefault(TextBox textBox, PictureBox pictureBox, Label textEdit = null)
@@ -155,7 +145,6 @@ namespace MyPracticeProject
 
             if (acceptable)
             {
-                Data.UserName = textBoxUserName.Text;
                 Visible = false;
                 FormManager.Start();
             }

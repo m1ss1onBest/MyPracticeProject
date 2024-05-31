@@ -35,10 +35,6 @@ namespace MyPracticeProject
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.файлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.прочитатиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.зберегтиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.вихiдToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.операцiїToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.обчислитиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.очищенняЕкрануToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -55,6 +51,7 @@ namespace MyPracticeProject
             this.LabelSolutionInfo = new System.Windows.Forms.Label();
             this.labelSolutionDescription = new System.Windows.Forms.Label();
             this.pictureBoxKostyl = new System.Windows.Forms.PictureBox();
+            this.вихiдToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -64,37 +61,12 @@ namespace MyPracticeProject
             // 
             // menuStrip1
             // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { this.файлToolStripMenuItem, this.операцiїToolStripMenuItem });
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { this.операцiїToolStripMenuItem, this.вихiдToolStripMenuItem });
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
             this.menuStrip1.Size = new System.Drawing.Size(994, 24);
             this.menuStrip1.TabIndex = 0;
-            // 
-            // файлToolStripMenuItem
-            // 
-            this.файлToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { this.прочитатиToolStripMenuItem, this.зберегтиToolStripMenuItem, this.вихiдToolStripMenuItem });
-            this.файлToolStripMenuItem.Name = "файлToolStripMenuItem";
-            this.файлToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
-            this.файлToolStripMenuItem.Text = "Файл";
-            // 
-            // прочитатиToolStripMenuItem
-            // 
-            this.прочитатиToolStripMenuItem.Name = "прочитатиToolStripMenuItem";
-            this.прочитатиToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
-            this.прочитатиToolStripMenuItem.Text = "Прочитати";
-            // 
-            // зберегтиToolStripMenuItem
-            // 
-            this.зберегтиToolStripMenuItem.Name = "зберегтиToolStripMenuItem";
-            this.зберегтиToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
-            this.зберегтиToolStripMenuItem.Text = "Зберегти";
-            // 
-            // вихiдToolStripMenuItem
-            // 
-            this.вихiдToolStripMenuItem.Name = "вихiдToolStripMenuItem";
-            this.вихiдToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
-            this.вихiдToolStripMenuItem.Text = "Вихiд";
             // 
             // операцiїToolStripMenuItem
             // 
@@ -262,10 +234,10 @@ namespace MyPracticeProject
             // 
             this.labelSolutionDescription.BackColor = System.Drawing.Color.Transparent;
             this.labelSolutionDescription.Font = new System.Drawing.Font("e-Ukraine Head", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelSolutionDescription.Location = new System.Drawing.Point(69, 316);
+            this.labelSolutionDescription.Location = new System.Drawing.Point(67, 316);
             this.labelSolutionDescription.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelSolutionDescription.Name = "labelSolutionDescription";
-            this.labelSolutionDescription.Size = new System.Drawing.Size(483, 187);
+            this.labelSolutionDescription.Size = new System.Drawing.Size(485, 187);
             this.labelSolutionDescription.TabIndex = 40;
             this.labelSolutionDescription.Text = "labelSolutionDescription";
             this.labelSolutionDescription.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -278,6 +250,12 @@ namespace MyPracticeProject
             this.pictureBoxKostyl.Size = new System.Drawing.Size(274, 41);
             this.pictureBoxKostyl.TabIndex = 41;
             this.pictureBoxKostyl.TabStop = false;
+            // 
+            // вихiдToolStripMenuItem
+            // 
+            this.вихiдToolStripMenuItem.Name = "вихiдToolStripMenuItem";
+            this.вихiдToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
+            this.вихiдToolStripMenuItem.Text = "Вихiд";
             // 
             // FormSolution1
             // 
@@ -337,9 +315,6 @@ namespace MyPracticeProject
         private System.Windows.Forms.TextBox textBoxAngle;
         private System.Windows.Forms.Label labelAngle;
 
-        private System.Windows.Forms.ToolStripMenuItem файлToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem прочитатиToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem зберегтиToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem вихiдToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem операцiїToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem обчислитиToolStripMenuItem;

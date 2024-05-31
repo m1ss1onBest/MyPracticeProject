@@ -42,11 +42,8 @@
             this.labelPassword = new System.Windows.Forms.Label();
             this.buttonLogIn = new System.Windows.Forms.Button();
             this.buttonAsGuest = new System.Windows.Forms.Button();
-            this.labelUserName = new System.Windows.Forms.Label();
             this.labelEmail = new System.Windows.Forms.Label();
             this.checkBoxAgree = new System.Windows.Forms.CheckBox();
-            this.textBoxUserName = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBoxEmailLabel = new System.Windows.Forms.PictureBox();
             this.textBoxEmail = new System.Windows.Forms.TextBox();
             this.pictureBoxPasswordLabel = new System.Windows.Forms.PictureBox();
@@ -55,7 +52,6 @@
             this.labelEmailWarning = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxEmailLabel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPasswordLabel)).BeginInit();
             this.SuspendLayout();
@@ -181,7 +177,7 @@
             // labelPassword
             // 
             this.labelPassword.Font = new System.Drawing.Font("e-Ukraine Head", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelPassword.Location = new System.Drawing.Point(430, 361);
+            this.labelPassword.Location = new System.Drawing.Point(430, 258);
             this.labelPassword.Name = "labelPassword";
             this.labelPassword.Size = new System.Drawing.Size(424, 32);
             this.labelPassword.TabIndex = 6;
@@ -221,20 +217,10 @@
             this.buttonAsGuest.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.buttonAsGuest.UseVisualStyleBackColor = false;
             // 
-            // labelUserName
-            // 
-            this.labelUserName.Font = new System.Drawing.Font("e-Ukraine Head", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelUserName.Location = new System.Drawing.Point(430, 139);
-            this.labelUserName.Name = "labelUserName";
-            this.labelUserName.Size = new System.Drawing.Size(424, 32);
-            this.labelUserName.TabIndex = 4;
-            this.labelUserName.Text = "labelUserName";
-            this.labelUserName.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            // 
             // labelEmail
             // 
             this.labelEmail.Font = new System.Drawing.Font("e-Ukraine Head", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelEmail.Location = new System.Drawing.Point(430, 250);
+            this.labelEmail.Location = new System.Drawing.Point(430, 147);
             this.labelEmail.Name = "labelEmail";
             this.labelEmail.Size = new System.Drawing.Size(424, 32);
             this.labelEmail.TabIndex = 10;
@@ -252,32 +238,11 @@
             this.checkBoxAgree.Text = "checkBoxAgree";
             this.checkBoxAgree.UseVisualStyleBackColor = true;
             // 
-            // textBoxUserName
-            // 
-            this.textBoxUserName.Font = new System.Drawing.Font("e-Ukraine Head", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxUserName.Location = new System.Drawing.Point(497, 174);
-            this.textBoxUserName.Name = "textBoxUserName";
-            this.textBoxUserName.Size = new System.Drawing.Size(292, 33);
-            this.textBoxUserName.TabIndex = 17;
-            this.textBoxUserName.Text = "textBoxUserName";
-            this.textBoxUserName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBoxUserName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxUserName_KeyPress);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(497, 205);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(292, 42);
-            this.pictureBox1.TabIndex = 18;
-            this.pictureBox1.TabStop = false;
-            // 
             // pictureBoxEmailLabel
             // 
             this.pictureBoxEmailLabel.BackColor = System.Drawing.Color.Transparent;
             this.pictureBoxEmailLabel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxEmailLabel.BackgroundImage")));
-            this.pictureBoxEmailLabel.Location = new System.Drawing.Point(497, 316);
+            this.pictureBoxEmailLabel.Location = new System.Drawing.Point(497, 213);
             this.pictureBoxEmailLabel.Name = "pictureBoxEmailLabel";
             this.pictureBoxEmailLabel.Size = new System.Drawing.Size(292, 42);
             this.pictureBoxEmailLabel.TabIndex = 20;
@@ -285,10 +250,11 @@
             // 
             // textBoxEmail
             // 
+            this.textBoxEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxEmail.Font = new System.Drawing.Font("e-Ukraine Head", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxEmail.Location = new System.Drawing.Point(497, 285);
+            this.textBoxEmail.Location = new System.Drawing.Point(497, 182);
             this.textBoxEmail.Name = "textBoxEmail";
-            this.textBoxEmail.Size = new System.Drawing.Size(292, 33);
+            this.textBoxEmail.Size = new System.Drawing.Size(292, 26);
             this.textBoxEmail.TabIndex = 19;
             this.textBoxEmail.Text = "textBoxEmail";
             this.textBoxEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -297,7 +263,7 @@
             // 
             this.pictureBoxPasswordLabel.BackColor = System.Drawing.Color.Transparent;
             this.pictureBoxPasswordLabel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxPasswordLabel.BackgroundImage")));
-            this.pictureBoxPasswordLabel.Location = new System.Drawing.Point(497, 427);
+            this.pictureBoxPasswordLabel.Location = new System.Drawing.Point(497, 324);
             this.pictureBoxPasswordLabel.Name = "pictureBoxPasswordLabel";
             this.pictureBoxPasswordLabel.Size = new System.Drawing.Size(292, 42);
             this.pictureBoxPasswordLabel.TabIndex = 22;
@@ -305,10 +271,11 @@
             // 
             // textBoxPassword
             // 
+            this.textBoxPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxPassword.Font = new System.Drawing.Font("e-Ukraine Head", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxPassword.Location = new System.Drawing.Point(497, 396);
+            this.textBoxPassword.Location = new System.Drawing.Point(497, 293);
             this.textBoxPassword.Name = "textBoxPassword";
-            this.textBoxPassword.Size = new System.Drawing.Size(292, 33);
+            this.textBoxPassword.Size = new System.Drawing.Size(292, 26);
             this.textBoxPassword.TabIndex = 21;
             this.textBoxPassword.Text = "textBoxPassword";
             this.textBoxPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -319,7 +286,7 @@
             this.labelPasswordWarning.BackColor = System.Drawing.Color.Transparent;
             this.labelPasswordWarning.Font = new System.Drawing.Font("e-Ukraine Head", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelPasswordWarning.ForeColor = System.Drawing.Color.Gold;
-            this.labelPasswordWarning.Location = new System.Drawing.Point(497, 432);
+            this.labelPasswordWarning.Location = new System.Drawing.Point(497, 329);
             this.labelPasswordWarning.Name = "labelPasswordWarning";
             this.labelPasswordWarning.Size = new System.Drawing.Size(292, 77);
             this.labelPasswordWarning.TabIndex = 12;
@@ -330,10 +297,10 @@
             // 
             this.labelEmailWarning.BackColor = System.Drawing.Color.Transparent;
             this.labelEmailWarning.Font = new System.Drawing.Font("e-Ukraine Head", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelEmailWarning.ForeColor = System.Drawing.Color.Gold;
-            this.labelEmailWarning.Location = new System.Drawing.Point(497, 321);
+            this.labelEmailWarning.ForeColor = System.Drawing.Color.Crimson;
+            this.labelEmailWarning.Location = new System.Drawing.Point(497, 218);
             this.labelEmailWarning.Name = "labelEmailWarning";
-            this.labelEmailWarning.Size = new System.Drawing.Size(292, 27);
+            this.labelEmailWarning.Size = new System.Drawing.Size(292, 29);
             this.labelEmailWarning.TabIndex = 23;
             this.labelEmailWarning.Text = "labelEmailWarning";
             this.labelEmailWarning.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -350,14 +317,11 @@
             this.Controls.Add(this.textBoxPassword);
             this.Controls.Add(this.pictureBoxEmailLabel);
             this.Controls.Add(this.textBoxEmail);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.textBoxUserName);
             this.Controls.Add(this.checkBoxAgree);
             this.Controls.Add(this.labelEmail);
             this.Controls.Add(this.buttonAsGuest);
             this.Controls.Add(this.buttonLogIn);
             this.Controls.Add(this.labelPassword);
-            this.Controls.Add(this.labelUserName);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.labelMainInfo);
             this.Controls.Add(this.labelMain);
@@ -372,7 +336,6 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxEmailLabel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPasswordLabel)).EndInit();
             this.ResumeLayout(false);
@@ -392,10 +355,6 @@
         private System.Windows.Forms.PictureBox pictureBoxPasswordLabel;
         private System.Windows.Forms.TextBox textBoxPassword;
 
-        private System.Windows.Forms.PictureBox pictureBox1;
-
-        private System.Windows.Forms.TextBox textBoxUserName;
-
         private System.Windows.Forms.Label label1;
 
         private System.Windows.Forms.Label labelLogoInfo;
@@ -412,8 +371,6 @@
         private System.Windows.Forms.Button buttonLogIn;
 
         private System.Windows.Forms.Label labelPassword;
-
-        private System.Windows.Forms.Label labelUserName;
 
         private System.Windows.Forms.Label labelInfo;
 
