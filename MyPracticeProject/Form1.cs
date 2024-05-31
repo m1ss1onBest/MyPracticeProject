@@ -146,7 +146,9 @@ namespace MyPracticeProject
             if (!Data.MatchPassword(textBoxPassword.Text) || !isPasswordAcceptable)
             {
                 SetError(textBoxPassword, pictureBoxPasswordLabel, "Пароль невірний", labelPasswordWarning);
+                return;
             }
+            Visible = false;
         }
     }
 }
