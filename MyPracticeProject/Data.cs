@@ -35,6 +35,7 @@ namespace MyPracticeProject
 
       private const String Password = "5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8";
       public static string UserName;
+      public static string Email = "susamogus@gmail.com";
       public static string HashPassword(string inputPassword)
       {
          using (SHA256 sha256 = SHA256.Create())

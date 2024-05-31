@@ -34,7 +34,7 @@ namespace MyPracticeProject
             labelPassword.Text = @"Пароль";
             
             //right part
-            labelPasswordWarning.Text = "";
+            labelPasswordWarning.Text = labelEmailWarning.Text = "";
             
             //button design
             buttonLogIn.Text = @"Увійти";
@@ -56,7 +56,7 @@ namespace MyPracticeProject
 
         private void textBoxUserName_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar != (int)Keys.Back && textBoxUserName.Text.Length >= 23)
+            if (e.KeyChar != (int)Keys.Back && textBoxUserName.Text.Length >= 23) 
             {
                 e.Handled = true;
             }
@@ -136,16 +136,29 @@ namespace MyPracticeProject
 
         private void buttonLogIn_Click(object sender, EventArgs e)
         {
+            bool acceptable = true;
             if (!Data.MatchPassword(textBoxPassword.Text) || !isPasswordAcceptable)
             {
                 Data.SetError(textBoxPassword, pictureBoxPasswordLabel, "Пароль невірний", labelPasswordWarning);
-                return;
+                acceptable = false;
             }
 
-            Data.UserName = textBoxUserName.Text;
-            Visible = false;
-            FormManager.Start();
-            // Dispose();
+            if (Data.Email != textBoxEmail.Text)
+            {
+                Data.SetError(textBoxEmail, pictureBoxEmailLabel, "Пошта не знайдена", labelEmailWarning);
+                acceptable = false;
+            }
+            else
+            {
+                SetDefault(textBoxEmail, pictureBoxEmailLabel, labelEmailWarning);
+            }
+
+            if (acceptable)
+            {
+                Data.UserName = textBoxUserName.Text;
+                Visible = false;
+                FormManager.Start();
+            }
         }
     }
 }

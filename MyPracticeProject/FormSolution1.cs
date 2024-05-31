@@ -23,27 +23,29 @@ namespace MyPracticeProject
 
         private void FormSolution1_Load(object sender, EventArgs e)
         {
-            Text = @"Задача1";
-            // ReSharper disable once LocalizableElement
-            labelAngle.Text = @"Кут μ" + "\u00b0";
+            Text = @"Задача 1";
+            labelAngle.Text = @"Кут " + "\u03B7" + "\u00b0";
             labelAngle.ForeColor = Data.Pal.OrangeDark;
             textBoxAngle.BorderStyle = BorderStyle.None;
             textBoxAngle.Text = "";
-
-            labelDigits.Text = @"Знак. після ','";
+            labelValue.Text = @"Значення";
+            labelGraph.Text = @"Графік f(x) = sin(x)";
+            labelDigits.Text = @"Точність";
             labelDigits.ForeColor = Data.Pal.OrangeDark;
             textBoxDigits.BorderStyle = BorderStyle.None;
-            textBoxDigits.Text = "2";
+            textBoxDigits.Text = @"2";
             
-            //setting error labels
-            labelInfoDigits.ForeColor = lableInfoAngle.ForeColor = Data.Pal.ErrorColor;
-            labelInfoDigits.Visible = lableInfoAngle.Visible = false;
+            //setting solution info
+            // LabelSolutionInfo.ForeColor = Data.Pal.OrangeDark;
+            LabelSolutionInfo.Text = @"Табулювання Функцiї" + '\n' + @"Варіант - XXVII";
+            labelSolutionDescription.Text = @"Обчислити та вивести на екран всі значення sin(a) на проміжку від 0 до " + "\u03B7" + @" з інтервалом 1" + "\u00b0.";
+            // \u03B7
         }
 
         private void textBoxAngle_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (int)Keys.Back) return;
-            if (!char.IsDigit(e.KeyChar))
+            if (!char.IsDigit(e.KeyChar) || textBoxAngle.Text.Length > 2)
             {
                 e.Handled = true;
             }
@@ -51,7 +53,18 @@ namespace MyPracticeProject
         private void textBoxDigits_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (int)Keys.Back) return;
-            if (!char.IsDigit(e.KeyChar) || textBoxDigits.Text.Length >= 15)
+            if (!char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+                return;
+            }
+            if (textBoxDigits.Text == "") return;
+            
+            char first = textBoxDigits.Text[0];
+            int key = int.Parse(e.KeyChar.ToString());
+            if (first != '1' ||
+                key > 5 ||
+                textBoxDigits.Text.Length >= 2)
             {
                 e.Handled = true;
             }
@@ -70,12 +83,45 @@ namespace MyPracticeProject
             int n = 1;
             while (Abs(val) >= e) {
                 // Calculate the next term in the series
-                val *= -x * x / ((2 * n) * (2 * n + 1));
+                val *= -x * x / (2 * n * (2 * n + 1));
                 result += val;
                 n++;
             }
             return result;
         }
+        
+        //setting all sin(x) for [0; μ] with the step of 1°
+        private void Calculations() {
+            chartGraph.Series[0].Points.Clear();
+            if (!double.TryParse(textBoxAngle.Text, out maxValue) ||
+                !int.TryParse(textBoxDigits.Text, out digits_AFTER_COMMA)) {
+                
+                return;
+            }
+            listBoxValues.Items.Clear();
 
+            double a = 0;
+            double b = 0;
+            // Convert maxValue from degrees to radians
+            double maxValueInRadians = maxValue * step;
+            for (double i = 0; i <= maxValueInRadians; i += step) {
+                a = Math.Round(i * 180 / pi, digits_AFTER_COMMA);
+                b = Math.Round(Sin(i), digits_AFTER_COMMA);
+                chartGraph.Series[0].Points.AddXY(a, b);
+                listBoxValues.Items.Add($@"f({a}°) = {b}");
+            }
+        }
+
+        private void обчислитиToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            очищенняЕкрануToolStripMenuItem_Click(sender, e);
+            Calculations(); 
+        }
+
+        private void очищенняЕкрануToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            chartGraph.Series[0].Points.Clear();
+            listBoxValues.Items.Clear();
+        }
     }
 }
