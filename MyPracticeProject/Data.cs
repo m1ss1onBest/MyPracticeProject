@@ -2,6 +2,7 @@
 using System.Drawing;
 using System.Security.Cryptography;
 using System.Text;
+using System.Windows.Forms;
 
 namespace MyPracticeProject
 {
@@ -9,15 +10,31 @@ namespace MyPracticeProject
    {
       public struct Pal
       {
-         public static readonly Color RegisterFormColor = Color.FromArgb(255, 30, 30, 30);
-         public static readonly Color OtherFormColor = Color.FromArgb(255, 65, 135, 192);
+         //monochrome
+         public static readonly Color RegisterFormColor = Color.FromArgb(255, 30, 30, 30); 
+         //textBox
          public static readonly Color WarningColor = Color.Gold;
          public static readonly Color SuccessColor = Color.MediumAquamarine;
          public static readonly Color ErrorColor = Color.Crimson;
+         //orange
+         public static readonly Color OrangeLight = Color.FromArgb(255, 255, 196, 96);
+         public static readonly Color OrangeMedium = Color.FromArgb(255, 247, 174, 102);
+         public static readonly Color OrangeDark = Color.FromArgb(255, 238, 145, 84);
+      }
+
+      public static void SetError(TextBox textBox, PictureBox pictureBox, string message, Label textEdit = null)
+      {
+         pictureBox.Image = Image.FromFile(@"D:\mwp\cs-practice\MyPracticeProject\MyPracticeProject\assets\saved-line-error.png");
+         textBox.ForeColor = Data.Pal.ErrorColor;
+         if (textEdit != null)
+         {
+            textEdit.ForeColor = Data.Pal.ErrorColor;
+            textEdit.Text = message;
+         }
       }
 
       private const String Password = "5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8";
-      
+      public static string UserName;
       public static string HashPassword(string inputPassword)
       {
          using (SHA256 sha256 = SHA256.Create())

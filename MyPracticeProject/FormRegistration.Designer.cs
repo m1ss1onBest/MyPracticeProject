@@ -1,6 +1,6 @@
 ﻿namespace MyPracticeProject
 {
-    partial class Form1
+    partial class FormRegistration
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormRegistration));
             this.labelMain = new System.Windows.Forms.Label();
             this.labelMainInfo = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -325,7 +325,7 @@
             this.labelPasswordWarning.Text = "labelPasswordWarning";
             this.labelPasswordWarning.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // Form1
+            // FormRegistration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -349,9 +349,10 @@
             this.Controls.Add(this.labelMain);
             this.Font = new System.Drawing.Font("e-Ukraine Head", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Location = new System.Drawing.Point(15, 15);
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.Name = "Form1";
+            this.Name = "FormRegistration";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);

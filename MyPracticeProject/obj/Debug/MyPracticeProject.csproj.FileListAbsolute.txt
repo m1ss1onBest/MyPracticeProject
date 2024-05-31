@@ -6,5 +6,7 @@ D:\mwp\cs-practice\MyPracticeProject\MyPracticeProject\obj\Debug\MyPracticeProje
 D:\mwp\cs-practice\MyPracticeProject\MyPracticeProject\obj\Debug\MyPracticeProject.csproj.CoreCompileInputs.cache
 D:\mwp\cs-practice\MyPracticeProject\MyPracticeProject\obj\Debug\MyPracticeProject.exe
 D:\mwp\cs-practice\MyPracticeProject\MyPracticeProject\obj\Debug\MyPracticeProject.pdb
-D:\mwp\cs-practice\MyPracticeProject\MyPracticeProject\obj\Debug\MyPracticeProject.Form1.resources
 D:\mwp\cs-practice\MyPracticeProject\MyPracticeProject\obj\Debug\MyPracti.B9520A4A.Up2Date
+D:\mwp\cs-practice\MyPracticeProject\MyPracticeProject\obj\Debug\MyPracticeProject.FormManager.resources
+D:\mwp\cs-practice\MyPracticeProject\MyPracticeProject\obj\Debug\MyPracticeProject.FormRegistration.resources
+D:\mwp\cs-practice\MyPracticeProject\MyPracticeProject\obj\Debug\MyPracticeProject.FormSolution1.resources

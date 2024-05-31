@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace MyPracticeProject
 {
-    public partial class Form1 : Form
+    public partial class FormRegistration : Form
     {
-        public Form1() => InitializeComponent();
+        public FormRegistration() => InitializeComponent();
 
         private const string AllowedPassword = "1234567890qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM!~@#$;^&%*(){}[];?-_";
         private bool isPasswordAcceptable = false;
@@ -48,6 +48,10 @@ namespace MyPracticeProject
             textBoxUserName.BorderStyle = textBoxEmail.BorderStyle = textBoxPassword.BorderStyle = BorderStyle.None;
             textBoxPassword.PasswordChar = '•';
             textBoxUserName.Text = textBoxEmail.Text = textBoxPassword.Text = "";
+            
+            
+            //TEST REGION
+            FormSolution1.Start();
         }
 
         private void textBoxUserName_KeyPress(object sender, KeyPressEventArgs e)
@@ -57,8 +61,7 @@ namespace MyPracticeProject
                 e.Handled = true;
             }
         }
-
-
+        
         private void SetDefault(TextBox textBox, PictureBox pictureBox, Label textEdit = null)
         {
             pictureBox.Image = Image.FromFile(@"D:\mwp\cs-practice\MyPracticeProject\MyPracticeProject\assets\saved-line.png");
@@ -86,16 +89,6 @@ namespace MyPracticeProject
             {
                 textEdit.ForeColor = Data.Pal.SuccessColor;
                 textEdit.Text = @"Пароль підходить";
-            }
-        }
-        private void SetError(TextBox textBox, PictureBox pictureBox, string message, Label textEdit = null)
-        {
-            pictureBox.Image = Image.FromFile(@"D:\mwp\cs-practice\MyPracticeProject\MyPracticeProject\assets\saved-line-error.png");
-            textBox.ForeColor = Data.Pal.ErrorColor;
-            if (textEdit != null)
-            {
-                textEdit.ForeColor = Data.Pal.ErrorColor;
-                textEdit.Text = message;
             }
         }
 
@@ -145,10 +138,14 @@ namespace MyPracticeProject
         {
             if (!Data.MatchPassword(textBoxPassword.Text) || !isPasswordAcceptable)
             {
-                SetError(textBoxPassword, pictureBoxPasswordLabel, "Пароль невірний", labelPasswordWarning);
+                Data.SetError(textBoxPassword, pictureBoxPasswordLabel, "Пароль невірний", labelPasswordWarning);
                 return;
             }
+
+            Data.UserName = textBoxUserName.Text;
             Visible = false;
+            FormManager.Start();
+            // Dispose();
         }
     }
 }
