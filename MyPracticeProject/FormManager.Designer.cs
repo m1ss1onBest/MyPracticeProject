@@ -41,6 +41,7 @@ namespace MyPracticeProject
             this.задача5ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.додатковоToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.згенеруватиПарольToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.вихiдToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -59,7 +60,6 @@ namespace MyPracticeProject
             this.label1 = new System.Windows.Forms.Label();
             this.labelInfo1 = new System.Windows.Forms.Label();
             this.labelName1 = new System.Windows.Forms.Label();
-            this.вихiдToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -95,6 +95,7 @@ namespace MyPracticeProject
             this.задача2ToolStripMenuItem.Name = "задача2ToolStripMenuItem";
             this.задача2ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.задача2ToolStripMenuItem.Text = "Задача 2";
+            this.задача2ToolStripMenuItem.Click += new System.EventHandler(this.задача2ToolStripMenuItem_Click);
             // 
             // задача3ToolStripMenuItem
             // 
@@ -130,6 +131,15 @@ namespace MyPracticeProject
             this.згенеруватиПарольToolStripMenuItem.Text = "Згенерувати Пароль";
             this.згенеруватиПарольToolStripMenuItem.Click += new System.EventHandler(this.згенеруватиПарольToolStripMenuItem_Click);
             // 
+            // вихiдToolStripMenuItem
+            // 
+            this.вихiдToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.вихiдToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.вихiдToolStripMenuItem.Name = "вихiдToolStripMenuItem";
+            this.вихiдToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
+            this.вихiдToolStripMenuItem.Text = "Вихiд";
+            this.вихiдToolStripMenuItem.Click += new System.EventHandler(this.вихiдToolStripMenuItem_Click_1);
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
@@ -151,9 +161,9 @@ namespace MyPracticeProject
             this.panel1.Controls.Add(this.labelInfo1);
             this.panel1.Controls.Add(this.labelName1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(366, 24);
+            this.panel1.Location = new System.Drawing.Point(331, 24);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(703, 567);
+            this.panel1.Size = new System.Drawing.Size(738, 567);
             this.panel1.TabIndex = 1;
             // 
             // label7
@@ -355,20 +365,12 @@ namespace MyPracticeProject
             this.labelName1.TabIndex = 0;
             this.labelName1.Text = "Табуляцiя функцiї";
             // 
-            // вихiдToolStripMenuItem
-            // 
-            this.вихiдToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.вихiдToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.вихiдToolStripMenuItem.Name = "вихiдToolStripMenuItem";
-            this.вихiдToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
-            this.вихiдToolStripMenuItem.Text = "Вихiд";
-            this.вихiдToolStripMenuItem.Click += new System.EventHandler(this.вихiдToolStripMenuItem_Click_1);
-            // 
             // FormManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1069, 591);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
@@ -388,6 +390,9 @@ namespace MyPracticeProject
             this.ResumeLayout(false);
             this.PerformLayout();
         }
+
+        private System.Windows.Forms.ToolStripMenuItem завдання2ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem згенеруватиПарольToolStripMenuItem1;
 
         private System.Windows.Forms.Label label7;
 

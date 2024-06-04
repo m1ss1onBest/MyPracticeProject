@@ -23,12 +23,6 @@ namespace MyPracticeProject
         {
             Application.Exit();
         }
-
-        private void задача1ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Visible = false;
-            FormSolution1.Start();
-        }
         
         private void згенеруватиПарольToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -46,6 +40,20 @@ namespace MyPracticeProject
             {
                 Close();
             }
+        }
+
+        
+        // solutions
+        private void задача1ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Visible = false;
+            FormSolution1.Start();
+        }
+        
+        private void задача2ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Visible = false;
+            FormSolution2.Start();
         }
     }
 }

@@ -11,3 +11,4 @@ D:\mwp\cs-practice\MyPracticeProject\MyPracticeProject\obj\Debug\MyPracticeProje
 D:\mwp\cs-practice\MyPracticeProject\MyPracticeProject\obj\Debug\MyPracticeProject.FormRegistration.resources
 D:\mwp\cs-practice\MyPracticeProject\MyPracticeProject\obj\Debug\MyPracticeProject.FormSolution1.resources
 D:\mwp\cs-practice\MyPracticeProject\MyPracticeProject\obj\Debug\MyPracticeProject.FormPasswordGenerator.resources
+D:\mwp\cs-practice\MyPracticeProject\MyPracticeProject\obj\Debug\MyPracticeProject.FormSolution2.resources

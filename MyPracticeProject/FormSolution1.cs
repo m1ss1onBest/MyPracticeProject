@@ -97,7 +97,6 @@ namespace MyPracticeProject
             chartGraph.Series[0].Points.Clear();
             if (!double.TryParse(textBoxAngle.Text, out maxValue) ||
                 !int.TryParse(textBoxDigits.Text, out digits_AFTER_COMMA)) {
-                
                 return;
             }
             listBoxValues.Items.Clear();
@@ -125,10 +124,10 @@ namespace MyPracticeProject
         {
             chartGraph.Series[0].Points.Clear();
             listBoxValues.Items.Clear();
+            pictureBoxKostyl.Image = Image.FromFile(@"D:\mwp\cs-practice\MyPracticeProject\MyPracticeProject\assets\orange-kostyl2.png");
         }
         
         private void FormSolution1_FormClosing(object sender, FormClosingEventArgs e) => FormManager.Start();
         private void вихiдToolStripMenuItem_Click(object sender, EventArgs e) => Close();
-
     }
 }

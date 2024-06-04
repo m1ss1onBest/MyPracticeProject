@@ -58,6 +58,7 @@
             // 
             // labelMain
             // 
+            this.labelMain.BackColor = System.Drawing.Color.Transparent;
             this.labelMain.Font = new System.Drawing.Font("e-Ukraine Head", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelMain.Location = new System.Drawing.Point(498, 13);
             this.labelMain.Name = "labelMain";
@@ -68,6 +69,7 @@
             // 
             // labelMainInfo
             // 
+            this.labelMainInfo.BackColor = System.Drawing.Color.Transparent;
             this.labelMainInfo.Font = new System.Drawing.Font("e-Ukraine Head", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelMainInfo.Location = new System.Drawing.Point(430, 83);
             this.labelMainInfo.Name = "labelMainInfo";
@@ -176,6 +178,7 @@
             // 
             // labelPassword
             // 
+            this.labelPassword.BackColor = System.Drawing.Color.Transparent;
             this.labelPassword.Font = new System.Drawing.Font("e-Ukraine Head", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelPassword.Location = new System.Drawing.Point(430, 258);
             this.labelPassword.Name = "labelPassword";
@@ -220,6 +223,7 @@
             // 
             // labelEmail
             // 
+            this.labelEmail.BackColor = System.Drawing.Color.Transparent;
             this.labelEmail.Font = new System.Drawing.Font("e-Ukraine Head", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelEmail.Location = new System.Drawing.Point(430, 147);
             this.labelEmail.Name = "labelEmail";

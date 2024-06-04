@@ -100,7 +100,7 @@ namespace MyPracticeProject
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(77, 195);
+            this.pictureBox1.Location = new System.Drawing.Point(112, 212);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(401, 42);
@@ -111,7 +111,7 @@ namespace MyPracticeProject
             // 
             this.textBoxAngle.BackColor = System.Drawing.Color.LightGray;
             this.textBoxAngle.Font = new System.Drawing.Font("e-Ukraine Head", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxAngle.Location = new System.Drawing.Point(77, 164);
+            this.textBoxAngle.Location = new System.Drawing.Point(112, 181);
             this.textBoxAngle.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.textBoxAngle.Name = "textBoxAngle";
             this.textBoxAngle.Size = new System.Drawing.Size(400, 33);
@@ -123,7 +123,7 @@ namespace MyPracticeProject
             // labelAngle
             // 
             this.labelAngle.Font = new System.Drawing.Font("e-Ukraine Head", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelAngle.Location = new System.Drawing.Point(77, 129);
+            this.labelAngle.Location = new System.Drawing.Point(112, 146);
             this.labelAngle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelAngle.Name = "labelAngle";
             this.labelAngle.Size = new System.Drawing.Size(401, 32);
@@ -135,10 +135,10 @@ namespace MyPracticeProject
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
-            this.pictureBox2.Location = new System.Drawing.Point(77, 271);
+            this.pictureBox2.Location = new System.Drawing.Point(112, 288);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(401, 42);
+            this.pictureBox2.Size = new System.Drawing.Size(401, 21);
             this.pictureBox2.TabIndex = 34;
             this.pictureBox2.TabStop = false;
             // 
@@ -146,7 +146,7 @@ namespace MyPracticeProject
             // 
             this.textBoxDigits.BackColor = System.Drawing.Color.LightGray;
             this.textBoxDigits.Font = new System.Drawing.Font("e-Ukraine Head", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxDigits.Location = new System.Drawing.Point(77, 240);
+            this.textBoxDigits.Location = new System.Drawing.Point(112, 257);
             this.textBoxDigits.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.textBoxDigits.Name = "textBoxDigits";
             this.textBoxDigits.Size = new System.Drawing.Size(400, 33);
@@ -158,7 +158,7 @@ namespace MyPracticeProject
             // labelDigits
             // 
             this.labelDigits.Font = new System.Drawing.Font("e-Ukraine Head", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelDigits.Location = new System.Drawing.Point(77, 205);
+            this.labelDigits.Location = new System.Drawing.Point(112, 222);
             this.labelDigits.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelDigits.Name = "labelDigits";
             this.labelDigits.Size = new System.Drawing.Size(401, 32);
@@ -173,16 +173,16 @@ namespace MyPracticeProject
             this.listBoxValues.Font = new System.Drawing.Font("e-Ukraine Head", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.listBoxValues.FormattingEnabled = true;
             this.listBoxValues.ItemHeight = 23;
-            this.listBoxValues.Location = new System.Drawing.Point(560, 68);
+            this.listBoxValues.Location = new System.Drawing.Point(111, 347);
             this.listBoxValues.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.listBoxValues.Name = "listBoxValues";
-            this.listBoxValues.Size = new System.Drawing.Size(390, 115);
+            this.listBoxValues.Size = new System.Drawing.Size(401, 184);
             this.listBoxValues.TabIndex = 35;
             // 
             // labelValue
             // 
             this.labelValue.Font = new System.Drawing.Font("e-Ukraine Head", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelValue.Location = new System.Drawing.Point(560, 33);
+            this.labelValue.Location = new System.Drawing.Point(112, 312);
             this.labelValue.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelValue.Name = "labelValue";
             this.labelValue.Size = new System.Drawing.Size(389, 32);
@@ -218,7 +218,7 @@ namespace MyPracticeProject
             // labelGraph
             // 
             this.labelGraph.Font = new System.Drawing.Font("e-Ukraine Head", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelGraph.Location = new System.Drawing.Point(560, 186);
+            this.labelGraph.Location = new System.Drawing.Point(559, 208);
             this.labelGraph.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelGraph.Name = "labelGraph";
             this.labelGraph.Size = new System.Drawing.Size(389, 41);
@@ -229,11 +229,11 @@ namespace MyPracticeProject
             // LabelSolutionInfo
             // 
             this.LabelSolutionInfo.BackColor = System.Drawing.Color.Transparent;
-            this.LabelSolutionInfo.Font = new System.Drawing.Font("e-Ukraine Head", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.LabelSolutionInfo.Location = new System.Drawing.Point(13, 33);
+            this.LabelSolutionInfo.Font = new System.Drawing.Font("e-Ukraine Head", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.LabelSolutionInfo.Location = new System.Drawing.Point(85, 53);
             this.LabelSolutionInfo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LabelSolutionInfo.Name = "LabelSolutionInfo";
-            this.LabelSolutionInfo.Size = new System.Drawing.Size(539, 96);
+            this.LabelSolutionInfo.Size = new System.Drawing.Size(467, 78);
             this.LabelSolutionInfo.TabIndex = 39;
             this.LabelSolutionInfo.Text = "LabelSolutionInfo";
             this.LabelSolutionInfo.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -242,10 +242,10 @@ namespace MyPracticeProject
             // 
             this.labelSolutionDescription.BackColor = System.Drawing.Color.Transparent;
             this.labelSolutionDescription.Font = new System.Drawing.Font("e-Ukraine Head", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelSolutionDescription.Location = new System.Drawing.Point(67, 316);
+            this.labelSolutionDescription.Location = new System.Drawing.Point(560, 33);
             this.labelSolutionDescription.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelSolutionDescription.Name = "labelSolutionDescription";
-            this.labelSolutionDescription.Size = new System.Drawing.Size(485, 187);
+            this.labelSolutionDescription.Size = new System.Drawing.Size(389, 175);
             this.labelSolutionDescription.TabIndex = 40;
             this.labelSolutionDescription.Text = "labelSolutionDescription";
             this.labelSolutionDescription.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -287,6 +287,7 @@ namespace MyPracticeProject
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "FormSolution1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "FormSolution1";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormSolution1_FormClosing);
             this.Load += new System.EventHandler(this.FormSolution1_Load);
             this.menuStrip1.ResumeLayout(false);
