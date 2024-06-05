@@ -55,5 +55,11 @@ namespace MyPracticeProject
             Visible = false;
             FormSolution2.Start();
         }
+
+        private void задача3ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Visible = false;
+            FormSolution3.Start();
+        }
     }
 }

@@ -129,5 +129,25 @@ namespace MyPracticeProject
         
         private void FormSolution1_FormClosing(object sender, FormClosingEventArgs e) => FormManager.Start();
         private void вихiдToolStripMenuItem_Click(object sender, EventArgs e) => Close();
+        
+        private void FormSolution1_MouseDown_1(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                contextMenuStrip1.Show(this, e.Location);
+            }
+        }
+
+        private void обчислитиToolStripMenuItem1_Click(object sender, EventArgs e) =>
+            обчислитиToolStripMenuItem_Click(sender, e);
+
+        private void очиститиЕкранToolStripMenuItem_Click(object sender, EventArgs e) =>
+            очиститиЕкранToolStripMenuItem_Click(sender, e);
+
+
+        private void вихiдToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            вихiдToolStripMenuItem_Click(sender, e);
+        }
     }
 }

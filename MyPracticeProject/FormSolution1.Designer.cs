@@ -31,6 +31,7 @@ namespace MyPracticeProject
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormSolution1));
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
@@ -52,11 +53,17 @@ namespace MyPracticeProject
             this.LabelSolutionInfo = new System.Windows.Forms.Label();
             this.labelSolutionDescription = new System.Windows.Forms.Label();
             this.pictureBoxKostyl = new System.Windows.Forms.PictureBox();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.вВАААААУКПToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.обчислитиToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.очиститиЕкранToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.вихiдToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartGraph)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxKostyl)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -259,6 +266,40 @@ namespace MyPracticeProject
             this.pictureBoxKostyl.TabIndex = 41;
             this.pictureBoxKostyl.TabStop = false;
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { this.вВАААААУКПToolStripMenuItem, this.вихiдToolStripMenuItem1 });
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(123, 48);
+            // 
+            // вВАААААУКПToolStripMenuItem
+            // 
+            this.вВАААААУКПToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { this.обчислитиToolStripMenuItem1, this.очиститиЕкранToolStripMenuItem });
+            this.вВАААААУКПToolStripMenuItem.Name = "вВАААААУКПToolStripMenuItem";
+            this.вВАААААУКПToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
+            this.вВАААААУКПToolStripMenuItem.Text = "Операцiї";
+            // 
+            // обчислитиToolStripMenuItem1
+            // 
+            this.обчислитиToolStripMenuItem1.Name = "обчислитиToolStripMenuItem1";
+            this.обчислитиToolStripMenuItem1.Size = new System.Drawing.Size(162, 22);
+            this.обчислитиToolStripMenuItem1.Text = "Обчислити";
+            this.обчислитиToolStripMenuItem1.Click += new System.EventHandler(this.обчислитиToolStripMenuItem1_Click);
+            // 
+            // очиститиЕкранToolStripMenuItem
+            // 
+            this.очиститиЕкранToolStripMenuItem.Name = "очиститиЕкранToolStripMenuItem";
+            this.очиститиЕкранToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
+            this.очиститиЕкранToolStripMenuItem.Text = "Очистити екран";
+            this.очиститиЕкранToolStripMenuItem.Click += new System.EventHandler(this.очиститиЕкранToolStripMenuItem_Click);
+            // 
+            // вихiдToolStripMenuItem1
+            // 
+            this.вихiдToolStripMenuItem1.Name = "вихiдToolStripMenuItem1";
+            this.вихiдToolStripMenuItem1.Size = new System.Drawing.Size(122, 22);
+            this.вихiдToolStripMenuItem1.Text = "Вихiд";
+            this.вихiдToolStripMenuItem1.Click += new System.EventHandler(this.вихiдToolStripMenuItem1_Click);
+            // 
             // FormSolution1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 13F);
@@ -290,15 +331,25 @@ namespace MyPracticeProject
             this.Text = "FormSolution1";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormSolution1_FormClosing);
             this.Load += new System.EventHandler(this.FormSolution1_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FormSolution1_MouseDown_1);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartGraph)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxKostyl)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
         }
+
+        private System.Windows.Forms.ToolStripMenuItem вихiдToolStripMenuItem1;
+
+        private System.Windows.Forms.ToolStripMenuItem вВАААААУКПToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem обчислитиToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem очиститиЕкранToolStripMenuItem;
+
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
 
         private System.Windows.Forms.PictureBox pictureBoxKostyl;
 

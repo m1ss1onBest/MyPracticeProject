@@ -102,6 +102,7 @@ namespace MyPracticeProject
             this.задача3ToolStripMenuItem.Name = "задача3ToolStripMenuItem";
             this.задача3ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.задача3ToolStripMenuItem.Text = "Задача 3";
+            this.задача3ToolStripMenuItem.Click += new System.EventHandler(this.задача3ToolStripMenuItem_Click);
             // 
             // задача4ToolStripMenuItem
             // 

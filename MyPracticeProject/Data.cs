@@ -17,9 +17,10 @@ namespace MyPracticeProject
          public static readonly Color SuccessColor = Color.MediumAquamarine;
          public static readonly Color ErrorColor = Color.Crimson;
          //orange
-         public static readonly Color OrangeLight = Color.FromArgb(255, 255, 196, 96);
-         public static readonly Color OrangeMedium = Color.FromArgb(255, 247, 174, 102);
+         // public static readonly Color OrangeLight = Color.FromArgb(255, 255, 196, 96);
+         // public static readonly Color OrangeMedium = Color.FromArgb(255, 247, 174, 102);
          public static readonly Color OrangeDark = Color.FromArgb(255, 238, 145, 84);
+         public static readonly Color Green = Color.FromArgb(255, 130, 164, 103);
       }
       
       
