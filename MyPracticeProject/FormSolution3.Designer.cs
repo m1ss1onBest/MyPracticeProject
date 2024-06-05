@@ -37,20 +37,20 @@ namespace MyPracticeProject
             this.labelLastName = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.textBoxFirstName = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelFirstName = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.textBoxHeight = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.labelHeight = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.labelBirthDate = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.textBoxArraySize = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.labelFirstArraySize = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.студентиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.прочитатиЗФайлуToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.записатиУМасивToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.зберегтиФайлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.прочитатиЗФайлуToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.очиститиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.знайтиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.поВiкуToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -58,9 +58,9 @@ namespace MyPracticeProject
             this.мiнЗрiсьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.середнiйЗрiстПоГрупiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.вихiдToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.labelTotalInfo = new System.Windows.Forms.Label();
+            this.labelData = new System.Windows.Forms.Label();
+            this.labelSortedData = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dataGridViewSorted = new System.Windows.Forms.DataGridView();
@@ -107,6 +107,7 @@ namespace MyPracticeProject
             this.labelLastName.Name = "labelLastName";
             this.labelLastName.Size = new System.Drawing.Size(292, 32);
             this.labelLastName.TabIndex = 35;
+            this.labelLastName.Text = "labelLastName";
             this.labelLastName.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // pictureBox1
@@ -134,15 +135,16 @@ namespace MyPracticeProject
             this.textBoxFirstName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBoxFirstName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxFirstName_KeyPress);
             // 
-            // label1
+            // labelFirstName
             // 
-            this.label1.Font = new System.Drawing.Font("e-Ukraine Head", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(91, 315);
-            this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(292, 32);
-            this.label1.TabIndex = 41;
-            this.label1.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.labelFirstName.Font = new System.Drawing.Font("e-Ukraine Head", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelFirstName.Location = new System.Drawing.Point(91, 315);
+            this.labelFirstName.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.labelFirstName.Name = "labelFirstName";
+            this.labelFirstName.Size = new System.Drawing.Size(292, 32);
+            this.labelFirstName.TabIndex = 41;
+            this.labelFirstName.Text = "labelFirstName";
+            this.labelFirstName.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // pictureBox3
             // 
@@ -169,15 +171,16 @@ namespace MyPracticeProject
             this.textBoxHeight.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBoxHeight.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxHeight_KeyPress);
             // 
-            // label2
+            // labelHeight
             // 
-            this.label2.Font = new System.Drawing.Font("e-Ukraine Head", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(91, 405);
-            this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(292, 32);
-            this.label2.TabIndex = 44;
-            this.label2.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.labelHeight.Font = new System.Drawing.Font("e-Ukraine Head", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelHeight.Location = new System.Drawing.Point(91, 405);
+            this.labelHeight.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.labelHeight.Name = "labelHeight";
+            this.labelHeight.Size = new System.Drawing.Size(292, 32);
+            this.labelHeight.TabIndex = 44;
+            this.labelHeight.Text = "labelHeight";
+            this.labelHeight.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // pictureBox4
             // 
@@ -190,15 +193,16 @@ namespace MyPracticeProject
             this.pictureBox4.TabIndex = 49;
             this.pictureBox4.TabStop = false;
             // 
-            // label3
+            // labelBirthDate
             // 
-            this.label3.Font = new System.Drawing.Font("e-Ukraine Head", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(90, 495);
-            this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(292, 32);
-            this.label3.TabIndex = 47;
-            this.label3.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.labelBirthDate.Font = new System.Drawing.Font("e-Ukraine Head", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelBirthDate.Location = new System.Drawing.Point(90, 495);
+            this.labelBirthDate.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.labelBirthDate.Name = "labelBirthDate";
+            this.labelBirthDate.Size = new System.Drawing.Size(292, 32);
+            this.labelBirthDate.TabIndex = 47;
+            this.labelBirthDate.Text = "labelBirthDate";
+            this.labelBirthDate.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // pictureBox5
             // 
@@ -225,15 +229,16 @@ namespace MyPracticeProject
             this.textBoxArraySize.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBoxArraySize.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxArraySize_KeyPress);
             // 
-            // label4
+            // labelFirstArraySize
             // 
-            this.label4.Font = new System.Drawing.Font("e-Ukraine Head", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Location = new System.Drawing.Point(91, 135);
-            this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(288, 32);
-            this.label4.TabIndex = 52;
-            this.label4.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.labelFirstArraySize.Font = new System.Drawing.Font("e-Ukraine Head", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelFirstArraySize.Location = new System.Drawing.Point(91, 135);
+            this.labelFirstArraySize.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.labelFirstArraySize.Name = "labelFirstArraySize";
+            this.labelFirstArraySize.Size = new System.Drawing.Size(288, 32);
+            this.labelFirstArraySize.TabIndex = 52;
+            this.labelFirstArraySize.Text = "labelFirstArraySize";
+            this.labelFirstArraySize.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // menuStrip1
             // 
@@ -245,12 +250,6 @@ namespace MyPracticeProject
             // 
             // студентиToolStripMenuItem
             // 
-            // 
-            // прочитатиЗФайлуToolStripMenuItem
-            // 
-            this.прочитатиЗФайлуToolStripMenuItem.Name = "прочитатиЗФайлуToolStripMenuItem";
-            this.прочитатиЗФайлуToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.прочитатиЗФайлуToolStripMenuItem.Text = "Прочитати з файлу";
             this.студентиToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { this.записатиУМасивToolStripMenuItem, this.зберегтиФайлToolStripMenuItem, this.прочитатиЗФайлуToolStripMenuItem, this.очиститиToolStripMenuItem });
             this.студентиToolStripMenuItem.Name = "студентиToolStripMenuItem";
             this.студентиToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
@@ -269,6 +268,12 @@ namespace MyPracticeProject
             this.зберегтиФайлToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.зберегтиФайлToolStripMenuItem.Text = "Зберегти файл";
             this.зберегтиФайлToolStripMenuItem.Click += new System.EventHandler(this.зберегтиФайлToolStripMenuItem_Click);
+            // 
+            // прочитатиЗФайлуToolStripMenuItem
+            // 
+            this.прочитатиЗФайлуToolStripMenuItem.Name = "прочитатиЗФайлуToolStripMenuItem";
+            this.прочитатиЗФайлуToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.прочитатиЗФайлуToolStripMenuItem.Text = "Прочитати з файлу";
             // 
             // очиститиToolStripMenuItem
             // 
@@ -314,34 +319,37 @@ namespace MyPracticeProject
             this.вихiдToolStripMenuItem.Text = "Вихiд";
             this.вихiдToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click_1);
             // 
-            // label5
+            // labelTotalInfo
             // 
-            this.label5.Font = new System.Drawing.Font("e-Ukraine Head", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.Location = new System.Drawing.Point(91, 24);
-            this.label5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(855, 111);
-            this.label5.TabIndex = 56;
+            this.labelTotalInfo.Font = new System.Drawing.Font("e-Ukraine Head", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelTotalInfo.Location = new System.Drawing.Point(91, 24);
+            this.labelTotalInfo.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.labelTotalInfo.Name = "labelTotalInfo";
+            this.labelTotalInfo.Size = new System.Drawing.Size(855, 111);
+            this.labelTotalInfo.TabIndex = 56;
+            this.labelTotalInfo.Text = "labelTotalInfo";
             // 
-            // label6
+            // labelData
             // 
-            this.label6.Font = new System.Drawing.Font("e-Ukraine Head", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label6.Location = new System.Drawing.Point(418, 135);
-            this.label6.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(333, 32);
-            this.label6.TabIndex = 59;
-            this.label6.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.labelData.Font = new System.Drawing.Font("e-Ukraine Head", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelData.Location = new System.Drawing.Point(418, 135);
+            this.labelData.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.labelData.Name = "labelData";
+            this.labelData.Size = new System.Drawing.Size(333, 32);
+            this.labelData.TabIndex = 59;
+            this.labelData.Text = "labelData";
+            this.labelData.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
-            // label7
+            // labelSortedData
             // 
-            this.label7.Font = new System.Drawing.Font("e-Ukraine Head", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label7.Location = new System.Drawing.Point(418, 361);
-            this.label7.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(499, 32);
-            this.label7.TabIndex = 60;
-            this.label7.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.labelSortedData.Font = new System.Drawing.Font("e-Ukraine Head", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelSortedData.Location = new System.Drawing.Point(418, 361);
+            this.labelSortedData.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.labelSortedData.Name = "labelSortedData";
+            this.labelSortedData.Size = new System.Drawing.Size(499, 32);
+            this.labelSortedData.TabIndex = 60;
+            this.labelSortedData.Text = "labelSortedData";
+            this.labelSortedData.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // dateTimePicker1
             // 
@@ -387,20 +395,20 @@ namespace MyPracticeProject
             this.Controls.Add(this.dataGridViewSorted);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.labelSortedData);
+            this.Controls.Add(this.labelData);
+            this.Controls.Add(this.labelTotalInfo);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.textBoxArraySize);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.labelFirstArraySize);
             this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.labelBirthDate);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.textBoxHeight);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.labelHeight);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.textBoxFirstName);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.labelFirstName);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.textBoxLastName);
             this.Controls.Add(this.labelLastName);
@@ -431,9 +439,9 @@ namespace MyPracticeProject
 
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
 
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label labelSortedData;
 
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label labelData;
 
         private System.Windows.Forms.ToolStripMenuItem студентиToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem записатиУМасивToolStripMenuItem;
@@ -447,23 +455,23 @@ namespace MyPracticeProject
         private System.Windows.Forms.ToolStripMenuItem очиститиToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem вихiдToolStripMenuItem;
 
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label labelTotalInfo;
 
         private System.Windows.Forms.MenuStrip menuStrip1;
 
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.TextBox textBoxArraySize;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label labelFirstArraySize;
 
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.TextBox textBoxHeight;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label labelHeight;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label labelBirthDate;
 
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox textBoxFirstName;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelFirstName;
 
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.TextBox textBoxLastName;
