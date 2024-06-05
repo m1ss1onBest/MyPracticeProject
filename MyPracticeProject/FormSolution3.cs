@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using System;
+using System.Windows.Forms;
 
 namespace MyPracticeProject
 {
@@ -16,5 +17,7 @@ namespace MyPracticeProject
         }
 
         private void FormSolution3_FormClosing(object sender, FormClosingEventArgs e) => FormManager.Start();
+        private void вихiдToolStripMenuItem_Click(object sender, EventArgs e) => Close();
+        
     }
 }

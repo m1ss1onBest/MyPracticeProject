@@ -56,7 +56,6 @@ namespace MyPracticeProject
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.вВАААААУКПToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.обчислитиToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.очиститиЕкранToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.вихiдToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -123,7 +122,6 @@ namespace MyPracticeProject
             this.textBoxAngle.Name = "textBoxAngle";
             this.textBoxAngle.Size = new System.Drawing.Size(400, 33);
             this.textBoxAngle.TabIndex = 29;
-            this.textBoxAngle.Text = "textBoxAngle";
             this.textBoxAngle.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBoxAngle.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxAngle_KeyPress);
             // 
@@ -135,7 +133,6 @@ namespace MyPracticeProject
             this.labelAngle.Name = "labelAngle";
             this.labelAngle.Size = new System.Drawing.Size(401, 32);
             this.labelAngle.TabIndex = 27;
-            this.labelAngle.Text = "labelAngle";
             this.labelAngle.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // pictureBox2
@@ -158,7 +155,6 @@ namespace MyPracticeProject
             this.textBoxDigits.Name = "textBoxDigits";
             this.textBoxDigits.Size = new System.Drawing.Size(400, 33);
             this.textBoxDigits.TabIndex = 33;
-            this.textBoxDigits.Text = "textBoxDigits";
             this.textBoxDigits.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBoxDigits.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxDigits_KeyPress);
             // 
@@ -170,7 +166,6 @@ namespace MyPracticeProject
             this.labelDigits.Name = "labelDigits";
             this.labelDigits.Size = new System.Drawing.Size(401, 32);
             this.labelDigits.TabIndex = 31;
-            this.labelDigits.Text = "labelDigits";
             this.labelDigits.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // listBoxValues
@@ -194,7 +189,6 @@ namespace MyPracticeProject
             this.labelValue.Name = "labelValue";
             this.labelValue.Size = new System.Drawing.Size(389, 32);
             this.labelValue.TabIndex = 36;
-            this.labelValue.Text = "labelValue";
             this.labelValue.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // chartGraph
@@ -230,7 +224,6 @@ namespace MyPracticeProject
             this.labelGraph.Name = "labelGraph";
             this.labelGraph.Size = new System.Drawing.Size(389, 41);
             this.labelGraph.TabIndex = 38;
-            this.labelGraph.Text = "labelGraph";
             this.labelGraph.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // LabelSolutionInfo
@@ -242,7 +235,6 @@ namespace MyPracticeProject
             this.LabelSolutionInfo.Name = "LabelSolutionInfo";
             this.LabelSolutionInfo.Size = new System.Drawing.Size(467, 78);
             this.LabelSolutionInfo.TabIndex = 39;
-            this.LabelSolutionInfo.Text = "LabelSolutionInfo";
             this.LabelSolutionInfo.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // labelSolutionDescription
@@ -254,7 +246,6 @@ namespace MyPracticeProject
             this.labelSolutionDescription.Name = "labelSolutionDescription";
             this.labelSolutionDescription.Size = new System.Drawing.Size(389, 175);
             this.labelSolutionDescription.TabIndex = 40;
-            this.labelSolutionDescription.Text = "labelSolutionDescription";
             this.labelSolutionDescription.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBoxKostyl
@@ -274,24 +265,16 @@ namespace MyPracticeProject
             // 
             // вВАААААУКПToolStripMenuItem
             // 
-            this.вВАААААУКПToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { this.обчислитиToolStripMenuItem1, this.очиститиЕкранToolStripMenuItem });
-            this.вВАААААУКПToolStripMenuItem.Name = "вВАААААУКПToolStripMenuItem";
-            this.вВАААААУКПToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
-            this.вВАААААУКПToolStripMenuItem.Text = "Операцiї";
             // 
             // обчислитиToolStripMenuItem1
             // 
             this.обчислитиToolStripMenuItem1.Name = "обчислитиToolStripMenuItem1";
-            this.обчислитиToolStripMenuItem1.Size = new System.Drawing.Size(162, 22);
+            this.обчислитиToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.обчислитиToolStripMenuItem1.Text = "Обчислити";
-            this.обчислитиToolStripMenuItem1.Click += new System.EventHandler(this.обчислитиToolStripMenuItem1_Click);
-            // 
-            // очиститиЕкранToolStripMenuItem
-            // 
-            this.очиститиЕкранToolStripMenuItem.Name = "очиститиЕкранToolStripMenuItem";
-            this.очиститиЕкранToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
-            this.очиститиЕкранToolStripMenuItem.Text = "Очистити екран";
-            this.очиститиЕкранToolStripMenuItem.Click += new System.EventHandler(this.очиститиЕкранToolStripMenuItem_Click);
+            this.вВАААААУКПToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { this.обчислитиToolStripMenuItem1 });
+            this.вВАААААУКПToolStripMenuItem.Name = "вВАААААУКПToolStripMenuItem";
+            this.вВАААААУКПToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
+            this.вВАААААУКПToolStripMenuItem.Text = "Операцiї";
             // 
             // вихiдToolStripMenuItem1
             // 
@@ -328,7 +311,6 @@ namespace MyPracticeProject
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "FormSolution1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormSolution1";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormSolution1_FormClosing);
             this.Load += new System.EventHandler(this.FormSolution1_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FormSolution1_MouseDown_1);
@@ -347,7 +329,6 @@ namespace MyPracticeProject
 
         private System.Windows.Forms.ToolStripMenuItem вВАААААУКПToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem обчислитиToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem очиститиЕкранToolStripMenuItem;
 
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
 

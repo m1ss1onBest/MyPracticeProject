@@ -39,7 +39,7 @@ namespace MyPracticeProject
             
             //setting solution info
             // LabelSolutionInfo.ForeColor = Data.Pal.OrangeDark;
-            LabelSolutionInfo.Text = @"Табулювання Функцiї" + '\n' + @"Варіант - XXVII";
+            LabelSolutionInfo.Text = @"Табулювання Функцiї";
             labelSolutionDescription.Text = @"Обчислити та вивести на екран всі значення sin(a) на проміжку від 0 до " + "\u03B7" + @" з інтервалом 1" + "\u00b0.";
             // \u03B7
         }
@@ -140,14 +140,13 @@ namespace MyPracticeProject
 
         private void обчислитиToolStripMenuItem1_Click(object sender, EventArgs e) =>
             обчислитиToolStripMenuItem_Click(sender, e);
-
-        private void очиститиЕкранToolStripMenuItem_Click(object sender, EventArgs e) =>
-            очиститиЕкранToolStripMenuItem_Click(sender, e);
+        
 
 
         private void вихiдToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             вихiдToolStripMenuItem_Click(sender, e);
         }
+        
     }
 }

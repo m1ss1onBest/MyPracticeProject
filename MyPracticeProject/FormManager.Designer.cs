@@ -43,6 +43,7 @@ namespace MyPracticeProject
             this.згенеруватиПарольToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.вихiдToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -86,34 +87,34 @@ namespace MyPracticeProject
             // задача1ToolStripMenuItem
             // 
             this.задача1ToolStripMenuItem.Name = "задача1ToolStripMenuItem";
-            this.задача1ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.задача1ToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
             this.задача1ToolStripMenuItem.Text = "Задача 1";
             this.задача1ToolStripMenuItem.Click += new System.EventHandler(this.задача1ToolStripMenuItem_Click);
             // 
             // задача2ToolStripMenuItem
             // 
             this.задача2ToolStripMenuItem.Name = "задача2ToolStripMenuItem";
-            this.задача2ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.задача2ToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
             this.задача2ToolStripMenuItem.Text = "Задача 2";
             this.задача2ToolStripMenuItem.Click += new System.EventHandler(this.задача2ToolStripMenuItem_Click);
             // 
             // задача3ToolStripMenuItem
             // 
             this.задача3ToolStripMenuItem.Name = "задача3ToolStripMenuItem";
-            this.задача3ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.задача3ToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
             this.задача3ToolStripMenuItem.Text = "Задача 3";
             this.задача3ToolStripMenuItem.Click += new System.EventHandler(this.задача3ToolStripMenuItem_Click);
             // 
             // задача4ToolStripMenuItem
             // 
             this.задача4ToolStripMenuItem.Name = "задача4ToolStripMenuItem";
-            this.задача4ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.задача4ToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
             this.задача4ToolStripMenuItem.Text = "Задача 4";
             // 
             // задача5ToolStripMenuItem
             // 
             this.задача5ToolStripMenuItem.Name = "задача5ToolStripMenuItem";
-            this.задача5ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.задача5ToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
             this.задача5ToolStripMenuItem.Text = "Задача 5";
             // 
             // додатковоToolStripMenuItem
@@ -144,6 +145,7 @@ namespace MyPracticeProject
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label11);
@@ -166,6 +168,18 @@ namespace MyPracticeProject
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(738, 567);
             this.panel1.TabIndex = 1;
+            // 
+            // label10
+            // 
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Font = new System.Drawing.Font("e-Ukraine Head", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label10.Location = new System.Drawing.Point(250, 244);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(21, 34);
+            this.label10.TabIndex = 18;
+            this.label10.Text = "-";
             // 
             // label7
             // 
@@ -278,9 +292,9 @@ namespace MyPracticeProject
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("e-Ukraine Head", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(317, 244);
+            this.label6.Location = new System.Drawing.Point(277, 244);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(383, 34);
+            this.label6.Size = new System.Drawing.Size(423, 34);
             this.label6.TabIndex = 8;
             this.label6.Text = "Табулювання функцiї синуса вiд 0 до";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -289,12 +303,12 @@ namespace MyPracticeProject
             // 
             this.labelName3.BackColor = System.Drawing.Color.Transparent;
             this.labelName3.Font = new System.Drawing.Font("e-Ukraine Head", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelName3.ForeColor = System.Drawing.Color.LightGreen;
+            this.labelName3.ForeColor = System.Drawing.Color.Violet;
             this.labelName3.Location = new System.Drawing.Point(0, 244);
             this.labelName3.Name = "labelName3";
-            this.labelName3.Size = new System.Drawing.Size(321, 34);
+            this.labelName3.Size = new System.Drawing.Size(259, 34);
             this.labelName3.TabIndex = 7;
-            this.labelName3.Text = "Задача 3 -";
+            this.labelName3.Text = "Облiк студентiв";
             // 
             // label2
             // 
@@ -323,8 +337,9 @@ namespace MyPracticeProject
             // labelName2
             // 
             this.labelName2.BackColor = System.Drawing.Color.Transparent;
+            this.labelName2.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.labelName2.Font = new System.Drawing.Font("e-Ukraine Head", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelName2.ForeColor = System.Drawing.Color.Violet;
+            this.labelName2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(164)))), ((int)(((byte)(103)))));
             this.labelName2.Location = new System.Drawing.Point(0, 122);
             this.labelName2.Name = "labelName2";
             this.labelName2.Size = new System.Drawing.Size(368, 34);
@@ -391,6 +406,8 @@ namespace MyPracticeProject
             this.ResumeLayout(false);
             this.PerformLayout();
         }
+
+        private System.Windows.Forms.Label label10;
 
         private System.Windows.Forms.ToolStripMenuItem завдання2ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem згенеруватиПарольToolStripMenuItem1;

@@ -21,6 +21,8 @@ namespace MyPracticeProject
          // public static readonly Color OrangeMedium = Color.FromArgb(255, 247, 174, 102);
          public static readonly Color OrangeDark = Color.FromArgb(255, 238, 145, 84);
          public static readonly Color Green = Color.FromArgb(255, 130, 164, 103);
+         public static readonly Color PurpleLight = Color.FromArgb(255, 192, 132, 183);
+         public static readonly Color PurpleDark = Color.FromArgb(255, 123, 86, 130);
       }
       
       

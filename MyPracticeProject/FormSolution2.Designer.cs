@@ -54,18 +54,20 @@ namespace MyPracticeProject
             this.labelVariantDescription2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // LabelSolutionInfo
             // 
             this.LabelSolutionInfo.BackColor = System.Drawing.Color.Transparent;
             this.LabelSolutionInfo.Font = new System.Drawing.Font("e-Ukraine Head", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.LabelSolutionInfo.Location = new System.Drawing.Point(23, 38);
+            this.LabelSolutionInfo.Location = new System.Drawing.Point(38, 42);
             this.LabelSolutionInfo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LabelSolutionInfo.Name = "LabelSolutionInfo";
             this.LabelSolutionInfo.Size = new System.Drawing.Size(467, 45);
@@ -227,10 +229,10 @@ namespace MyPracticeProject
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox4.BackgroundImage")));
-            this.pictureBox4.Location = new System.Drawing.Point(575, 338);
+            this.pictureBox4.Location = new System.Drawing.Point(573, 341);
             this.pictureBox4.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(400, 21);
+            this.pictureBox4.Size = new System.Drawing.Size(298, 21);
             this.pictureBox4.TabIndex = 59;
             this.pictureBox4.TabStop = false;
             // 
@@ -238,10 +240,10 @@ namespace MyPracticeProject
             // 
             this.textBoxSumma.BackColor = System.Drawing.Color.LightGray;
             this.textBoxSumma.Font = new System.Drawing.Font("e-Ukraine Head", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxSumma.Location = new System.Drawing.Point(575, 307);
+            this.textBoxSumma.Location = new System.Drawing.Point(573, 310);
             this.textBoxSumma.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.textBoxSumma.Name = "textBoxSumma";
-            this.textBoxSumma.Size = new System.Drawing.Size(400, 33);
+            this.textBoxSumma.Size = new System.Drawing.Size(298, 33);
             this.textBoxSumma.TabIndex = 58;
             this.textBoxSumma.Text = "textBoxSumma";
             this.textBoxSumma.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -265,7 +267,7 @@ namespace MyPracticeProject
             this.labelVariantDescription2.Location = new System.Drawing.Point(573, 139);
             this.labelVariantDescription2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelVariantDescription2.Name = "labelVariantDescription2";
-            this.labelVariantDescription2.Size = new System.Drawing.Size(546, 133);
+            this.labelVariantDescription2.Size = new System.Drawing.Size(546, 118);
             this.labelVariantDescription2.TabIndex = 61;
             this.labelVariantDescription2.Text = "labelVariantDescription2";
             // 
@@ -283,13 +285,22 @@ namespace MyPracticeProject
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("e-Ukraine Head", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(575, 272);
+            this.label2.Location = new System.Drawing.Point(573, 275);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(398, 32);
+            this.label2.Size = new System.Drawing.Size(296, 32);
             this.label2.TabIndex = 63;
             this.label2.Text = "Сума ряду";
             this.label2.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.Location = new System.Drawing.Point(878, 260);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(251, 232);
+            this.pictureBox1.TabIndex = 64;
+            this.pictureBox1.TabStop = false;
             // 
             // FormSolution2
             // 
@@ -298,6 +309,7 @@ namespace MyPracticeProject
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1187, 590);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.labelVariantDescription2);
@@ -326,9 +338,12 @@ namespace MyPracticeProject
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
         }
+
+        private System.Windows.Forms.PictureBox pictureBox1;
 
         private System.Windows.Forms.Label label2;
 
