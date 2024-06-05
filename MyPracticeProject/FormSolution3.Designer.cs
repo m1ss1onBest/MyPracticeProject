@@ -61,9 +61,9 @@ namespace MyPracticeProject
             this.вихiдToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label5 = new System.Windows.Forms.Label();
             this.dataGrid1 = new System.Windows.Forms.DataGrid();
-            this.dataGrid2 = new System.Windows.Forms.DataGrid();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.dataGrid2 = new System.Windows.Forms.DataGrid();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -323,8 +323,9 @@ namespace MyPracticeProject
             // вихiдToolStripMenuItem
             // 
             this.вихiдToolStripMenuItem.Name = "вихiдToolStripMenuItem";
-            this.вихiдToolStripMenuItem.Size = new System.Drawing.Size(45, 20);
-            this.вихiдToolStripMenuItem.Text = "CLos";
+            this.вихiдToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
+            this.вихiдToolStripMenuItem.Text = "Вихiд";
+            this.вихiдToolStripMenuItem.Click += new System.EventHandler(this.вихiдToolStripMenuItem_Click_1);
             // 
             // label5
             // 
@@ -348,17 +349,6 @@ namespace MyPracticeProject
             this.dataGrid1.Size = new System.Drawing.Size(528, 188);
             this.dataGrid1.TabIndex = 57;
             // 
-            // dataGrid2
-            // 
-            this.dataGrid2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGrid2.CaptionBackColor = System.Drawing.Color.DarkRed;
-            this.dataGrid2.DataMember = "";
-            this.dataGrid2.HeaderForeColor = System.Drawing.SystemColors.ControlText;
-            this.dataGrid2.Location = new System.Drawing.Point(418, 394);
-            this.dataGrid2.Name = "dataGrid2";
-            this.dataGrid2.Size = new System.Drawing.Size(528, 188);
-            this.dataGrid2.TabIndex = 58;
-            // 
             // label6
             // 
             this.label6.Font = new System.Drawing.Font("e-Ukraine Head", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -381,6 +371,18 @@ namespace MyPracticeProject
             this.label7.Text = "За певним значенням";
             this.label7.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
+            // dataGrid2
+            // 
+            this.dataGrid2.BackgroundColor = System.Drawing.Color.LightGray;
+            this.dataGrid2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGrid2.CaptionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(86)))), ((int)(((byte)(130)))));
+            this.dataGrid2.DataMember = "";
+            this.dataGrid2.HeaderForeColor = System.Drawing.SystemColors.ControlText;
+            this.dataGrid2.Location = new System.Drawing.Point(418, 396);
+            this.dataGrid2.Name = "dataGrid2";
+            this.dataGrid2.Size = new System.Drawing.Size(528, 188);
+            this.dataGrid2.TabIndex = 61;
+            // 
             // FormSolution3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 13F);
@@ -388,9 +390,9 @@ namespace MyPracticeProject
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1035, 679);
+            this.Controls.Add(this.dataGrid2);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.dataGrid2);
             this.Controls.Add(this.dataGrid1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.pictureBox5);

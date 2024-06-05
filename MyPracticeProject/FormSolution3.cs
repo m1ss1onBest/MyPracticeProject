@@ -17,7 +17,6 @@ namespace MyPracticeProject
         }
 
         private void FormSolution3_FormClosing(object sender, FormClosingEventArgs e) => FormManager.Start();
-        private void вихiдToolStripMenuItem_Click(object sender, EventArgs e) => Close();
-        
+        private void вихiдToolStripMenuItem_Click_1(object sender, EventArgs e) => Close();
     }
 }
