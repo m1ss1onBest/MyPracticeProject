@@ -28,6 +28,7 @@ namespace MyPracticeProject
             Text = @"Задача 1";
             labelAngle.Text = @"Кут " + "\u03B7" + "\u00b0";
             labelAngle.ForeColor = Data.Pal.OrangeDark;
+            LabelSolutionInfo.ForeColor = Data.Pal.OrangeDark;
             textBoxAngle.BorderStyle = BorderStyle.None;
             textBoxAngle.Text = "";
             labelValue.Text = @"Значення";

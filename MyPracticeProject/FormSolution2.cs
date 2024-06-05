@@ -4,7 +4,7 @@ using System.Windows.Forms;
 
 namespace MyPracticeProject
 {
-    public partial class FormSolution2 : Form 
+    public partial class FormSolution2 : Form
     {
         private FormSolution2()
         {
@@ -33,7 +33,7 @@ namespace MyPracticeProject
             // setting text info
             // LabelSolutionInfo.Text = @"Табулювання функцiї";
             // labelSolutionDescription.Text =
-                // "1. Скласти алгоритм програми.\n2. Виконати обчислення згiдно варiанту\n3. Результат обчислень вивести на екран i у текстовий файл\n4. Данi ввести та перевiрити на коректнiсть";
+            // "1. Скласти алгоритм програми.\n2. Виконати обчислення згiдно варiанту\n3. Результат обчислень вивести на екран i у текстовий файл\n4. Данi ввести та перевiрити на коректнiсть";
             labelVariantDescription.Text = "Обчислити суму ряду з заданою точністю ε = 0.0001";
             labelVariantDescription2.Text = "Елементи ряду та їх порядкові номери вивести на екран і у текстовий файл";
 
@@ -89,8 +89,9 @@ namespace MyPracticeProject
         {
             //checking for data input error
             if (!double.TryParse(textBoxE.Text, out E) ||
-                !int.TryParse(textBoxDigits.Text, out commaIndex))
-            {
+                !int.TryParse(textBoxDigits.Text, out commaIndex) ||
+                E == 0)
+    {
                 MessageBox.Show(
                     @"Missing function parameters" + '\n' + @"Setting e as 0,0001 by default",
                     @"Warning",
@@ -103,7 +104,7 @@ namespace MyPracticeProject
                     textBoxDigits.Text = @"4";
                     commaIndex = 4;
                 }
-            }
+    }
 
             DataSet dataSet = new DataSet();
             DataTable dataTable = new DataTable();
