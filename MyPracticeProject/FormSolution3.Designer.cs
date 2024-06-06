@@ -48,7 +48,7 @@ namespace MyPracticeProject
             this.labelFirstArraySize = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.студентиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.записатиУМасивToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.writeInArray_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.зберегтиФайлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.прочитатиЗФайлуToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.очиститиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -250,17 +250,17 @@ namespace MyPracticeProject
             // 
             // студентиToolStripMenuItem
             // 
-            this.студентиToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { this.записатиУМасивToolStripMenuItem, this.зберегтиФайлToolStripMenuItem, this.прочитатиЗФайлуToolStripMenuItem, this.очиститиToolStripMenuItem });
+            this.студентиToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { this.writeInArray_ToolStripMenuItem, this.зберегтиФайлToolStripMenuItem, this.прочитатиЗФайлуToolStripMenuItem, this.очиститиToolStripMenuItem });
             this.студентиToolStripMenuItem.Name = "студентиToolStripMenuItem";
             this.студентиToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
             this.студентиToolStripMenuItem.Text = "Студенти";
             // 
             // записатиУМасивToolStripMenuItem
             // 
-            this.записатиУМасивToolStripMenuItem.Name = "записатиУМасивToolStripMenuItem";
-            this.записатиУМасивToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.записатиУМасивToolStripMenuItem.Text = "Записати у масив";
-            this.записатиУМасивToolStripMenuItem.Click += new System.EventHandler(this.записатиУМасивToolStripMenuItem_Click);
+            this.writeInArray_ToolStripMenuItem.Name = "writeInArray_ToolStripMenuItem";
+            this.writeInArray_ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.writeInArray_ToolStripMenuItem.Text = "Записати у масив";
+            this.writeInArray_ToolStripMenuItem.Click += new System.EventHandler(this.writeInArray_ToolStripMenuItem_Click);
             // 
             // зберегтиФайлToolStripMenuItem
             // 
@@ -274,6 +274,7 @@ namespace MyPracticeProject
             this.прочитатиЗФайлуToolStripMenuItem.Name = "прочитатиЗФайлуToolStripMenuItem";
             this.прочитатиЗФайлуToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.прочитатиЗФайлуToolStripMenuItem.Text = "Прочитати з файлу";
+            this.прочитатиЗФайлуToolStripMenuItem.Click += new System.EventHandler(this.прочитатиЗФайлуToolStripMenuItem_Click);
             // 
             // очиститиToolStripMenuItem
             // 
@@ -444,7 +445,7 @@ namespace MyPracticeProject
         private System.Windows.Forms.Label labelData;
 
         private System.Windows.Forms.ToolStripMenuItem студентиToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem записатиУМасивToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem writeInArray_ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem зберегтиФайлToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem прочитатиЗФайлуToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem знайтиToolStripMenuItem;

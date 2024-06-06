@@ -1,14 +1,22 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Windows.Forms;
 using System.Xml.Linq;
 
-namespace MyPracticeProject
-{
-    public partial class FormSolution3 : Form
-    {
+namespace MyPracticeProject {
+    public partial class FormSolution3 : Form {
         private FormSolution3() => InitializeComponent();
-
+        
+        /** Path to database.xml file. */
+        private const string FilePath = "solution3_students.xml";
+        /** Student array used in saving data. */
+        private Student[] _studentArray;
+        /** Current index of student array. Used in iterating over students array. */
+        private int _currentIndex = 0;
+        /** Max size of students array. */
+        private int _maxIndex;
+        /** Student data type */
         public struct Student
         {
             public string LastName;
@@ -17,132 +25,96 @@ namespace MyPracticeProject
             public DateTime BirthDate;
         }
         
+        /** function used to create new student. TextBox correct text value check is required */
+        private Student GenerateStudent() => new Student() 
+        {
+            LastName = textBoxLastName.Text, 
+            FirstName = textBoxFirstName.Text,
+            Height = int.Parse(textBoxHeight.Text),
+            BirthDate = dateTimePicker1.Value
+        };
+        
+        
+        ///
+        /// REGION form
+        /// 
+        
+        /** start form function */
+        public static void Start()
+        {
+            FormSolution3 formSolution3 = new FormSolution3();
+            formSolution3.Show();
+        }
+        
+        private void FormSolution3_FormClosing(object sender, FormClosingEventArgs e) => FormManager.Start();
+        
+        /** form load function */
         private void FormSolution3_Load(object sender, EventArgs e)
         {
-            labelTotalInfo.Text = "Заданий одновимiрний масив з довiльною к-стью елементiв не менше 10, значення елементiв вводяться з клавiатури та записуються в файл. Виконати опрацювання масиву у вiдповiдностi з заданим варiантом завдання.\n27. Вiдомо про студентiв: прiзвище, iм'я, зрiст, дата народження: знайти студентiв по вiку студентiв з найбiльшим та найменшим ростом, середнiй зрiст по групi.";
-            записатиУМасивToolStripMenuItem.Enabled = false;
+            // setting form text
+            Text = @"Облiк студентiв";
+            labelTotalInfo.Text = @"Заданий одновимiрний масив з довiльною к-стью елементiв не менше 10, значення елементiв вводяться з клавiатури та записуються в файл. Виконати опрацювання масиву у вiдповiдностi з заданим варiантом завдання.\n27. Вiдомо про студентiв: прiзвище, iм'я, зрiст, дата народження: знайти студентiв по вiку студентiв з найбiльшим та найменшим ростом, середнiй зрiст по групi.";
+            writeInArray_ToolStripMenuItem.Enabled = false;
             зберегтиФайлToolStripMenuItem.Enabled = false;
-
+            // setting database fields
             dataGridView1.Columns.Add("Last name", "Last name");
             dataGridView1.Columns.Add("First name", "First name");
             dataGridView1.Columns.Add("Height", "Height");
             dataGridView1.Columns.Add("Date", "Date");
-            
+            // setting dataGridViewSorted fields
             dataGridViewSorted.Columns.Add("Last name", "Last name");
             dataGridViewSorted.Columns.Add("First name", "First name");
             dataGridViewSorted.Columns.Add("Height", "Height");
             dataGridViewSorted.Columns.Add("Date", "Date");
         }
 
-        private Student? GenerateStudent()
+        /** add student to DataGrid */
+        private void AddToDataGrid(Student student) =>
+            dataGridView1.Rows.Add(student.LastName, student.FirstName, student.Height, student.BirthDate.ToString("yy.MM.dd"));
+        
+        /** add student to file */
+        private void AddToFile(Student student)
         {
-            Student student = new Student()
+            XElement studentElement = new XElement("Student", 
+                new XElement("LastName", student.LastName),
+                new XElement("FirstName", student.FirstName),
+                new XElement("Height", student.Height),
+                new XElement("BirthDate", student.BirthDate.ToString("yy.MM.dd")));
+
+            //checking if the file exists and saving students
+            XDocument doc;
+            if (File.Exists(FilePath))
             {
-                LastName = textBoxLastName.Text,
-                FirstName = textBoxFirstName.Text,
-                BirthDate = dateTimePicker1.Value
-            };
-            if (!int.TryParse(textBoxHeight.Text, out student.Height) && student.Height != 0) return null;
-            return student;
-        }
-        private void AddToDataGrid(Student? student)
-        {
-            if (student == null) return;
-            dataGridView1.Rows.Add(student.Value.LastName, student.Value.FirstName, student.Value.Height, student.Value.BirthDate);
-        }
-
-        private const string Filepath = "solution3_students.xml";
-
-        private void AddToFile(Student? student)
-        {
-            if (student == null) return;
-                XElement studentElement = new XElement("Student",
-                    new XElement("LastName", student.Value.LastName),
-                    new XElement("FirstName", student.Value.FirstName),
-                    new XElement("Height", student.Value.Height),
-                    new XElement("BirthDate"), student.Value.BirthDate.ToString("yy.MM.dd"));
-                
-                XDocument doc;
-                if (File.Exists(Filepath))
-                {
-                    doc = XDocument.Load(Filepath);
-                    doc.Root.Add(studentElement);
-                }
-                else
-                {
-                    doc = new XDocument(new XElement("Students", studentElement));
-                }
-                
-                doc.Save(Filepath);
-        }
-
-        private void ReadFromFile()
-        {
-            if (File.Exists(Filepath))
-            {
-                XDocument doc = new XDocument(Filepath);
-                XElement root = doc.Root;
-                int index = 0;
-
-                foreach (XElement studentELement in root.Elements("Student"))
-                {
-                    if (index >= maxIndex) break;
-                    Student student = new Student
-                    {
-                        LastName = studentELement.Element("LastName")?.Value,
-                        FirstName = studentELement.Element("FirstName")?.Value,
-                        Height = int.Parse(studentELement.Element("Height")?.Value),
-                        BirthDate = DateTime.Parse(studentELement.Element("BirthDate")?.Value)
-                    };
-
-                    studentArray[index] = student;
-                    index++;
-                }
+                doc = XDocument.Load(FilePath);
+                doc.Root?.Add(studentElement);
             }
+            else
+            {
+                doc = new XDocument(new XElement("Students", studentElement));
+            }
+            doc.Save(FilePath);
         }
         
+        ///
+        /// REGION Analyzing text boxes
+        ///
         
-        public static void Start()
-        {
-            FormSolution3 formSolution3 = new FormSolution3();
-            formSolution3.Show();
-        }
-
-        private void FormSolution3_FormClosing(object sender, FormClosingEventArgs e) => FormManager.Start();
-        private void exitToolStripMenuItem_Click_1(object sender, EventArgs e) => Close();
-
-        // REGION text box input handler
         private void textBoxArraySize_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar == (int)Keys.Back)
+            if (e.KeyChar == (int)Keys.Back) return;
+            if (e.KeyChar == (int)Keys.Enter)
             {
-                e.Handled = false;
-                return;
-            }
-
-            if (e.KeyChar == (int)Keys.Enter)   
-            {
-                if (!int.TryParse(textBoxArraySize.Text, out maxIndex))
-                {
-                    return;
-                }
-
-                if (maxIndex == 0)
-                {
-                    return;
-                }
+                if (!int.TryParse(textBoxArraySize.Text, out _maxIndex)) return;
+                if (_maxIndex == 0) return;
+                
                 e.Handled = false;
                 textBoxArraySize.Enabled = false;
-                записатиУМасивToolStripMenuItem.Enabled = true;
-                studentArray = new Student[maxIndex];
+                writeInArray_ToolStripMenuItem.Enabled = true;
+                _studentArray = new Student[_maxIndex];
                 return;
             }
-
             if (char.IsDigit(e.KeyChar) && textBoxArraySize.Text.Length <= 2) return;
-            if (e.KeyChar != (int)Keys.Enter)
-            {
-                e.Handled = true; 
-            }
+            if (e.KeyChar != (int)Keys.Enter) e.Handled = true;
         } 
 
         private void textBoxLastName_KeyPress(object sender, KeyPressEventArgs e)
@@ -189,66 +161,136 @@ namespace MyPracticeProject
             }
         }
         
-        // REGION working with array
-        private int currentIndex = 0;
-        private int maxIndex;
-        private Student[] studentArray;
+        ///
+        /// REGION Tool strip buttons
+        ///
+        private void exitToolStripMenuItem_Click_1(object sender, EventArgs e) => Close();
         
         // adding student to the array
-        private void записатиУМасивToolStripMenuItem_Click(object sender, EventArgs e)
+        private void writeInArray_ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (currentIndex >= maxIndex)
+            if (_currentIndex >= _maxIndex)
             {
-                MessageBox.Show(
-                    @"Перевищено розмiр масиву!",
-                    @"Помилка додавання студентiв",
-                    MessageBoxButtons.OK,
+                MessageBox.Show(@"Перевищено розмiр масиву!", @"Помилка додавання даних у масив", MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
                 return;
             }
-            Student? student = GenerateStudent();
-            if (student != null)
+
+            string message = "";
+            if (textBoxLastName.Text.Length < 3) message += @"- Довжина прiзвища не повина бути менша нiж 3 символи." + '\n';
+            if (textBoxFirstName.Text.Length < 3) message += @"- Довжина iменi не повина бути менша нiж 3 символи." + '\n';
+            if (!int.TryParse(textBoxHeight.Text, out var height) || height < 90) message += @"- Невiрно введенi данi про зрiст." + '\n';
+            if (message != "")
             {
-                studentArray[currentIndex] = (Student)student;
-                MessageBox.Show(
-                    @"Студент успiшно доданий до масиву",
-                    @"Додавання у масив",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Information);
-            }
-            else
-            {
-                MessageBox.Show(
-                    @"Неможливо додати студента!",
-                    @"Помилкка введення вхiдних даних",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
+                MessageBox.Show("Невiрно введенi данi про студента, а саме:" + '\n' + message);
                 return;
             }
-            currentIndex++;
+
+            Student student = GenerateStudent();
+            _studentArray[_currentIndex] = student;
+            _currentIndex++;
+            зберегтиФайлToolStripMenuItem.Enabled = true;
+            MessageBox.Show(@"Студент успiшно до масиву", @"Додавання студентiв", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            textBoxLastName.Text = textBoxFirstName.Text = textBoxHeight.Text = "";
         }
 
         private void зберегтиФайлToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            foreach (Student? student in studentArray)
+            ClearXmlFile();
+            ClearDataGridView();
+            foreach (var student in _studentArray)
             {
-                if (student == null) return;
+                if (string.IsNullOrEmpty(student.LastName)) continue;
                 AddToDataGrid(student);
                 AddToFile(student);
             }
+            прочитатиЗФайлуToolStripMenuItem.Enabled = false;
+            зберегтиФайлToolStripMenuItem.Enabled = false;
+            MessageBox.Show(@"Данi успiшно збереженi", @"Збереження даних", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
         
         private void прочитатиЗФайлуToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ReadFromFile();
-            foreach (Student? student in studentArray)
+            if (!File.Exists(FilePath))
             {
-                if (student != null)
+                MessageBox.Show(@"Файл не знайдено", @"Помилка завантаження файлу", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            
+            ReadFromFile();
+            for (int i = 0; i < _currentIndex; i++)
+            {
+                Student student = _studentArray[i];
+                _studentArray[i] = student;
+            }
+            прочитатиЗФайлуToolStripMenuItem.Enabled = false;
+        }
+
+        ///
+        /// REGION working with files
+        ///
+        
+        private void ClearXmlFile()
+        {
+            XElement rootElement = new XElement("Students");
+            XDocument doc = new XDocument(rootElement);
+            doc.Save(FilePath);
+        }
+        private void ClearDataGridView()
+        {
+            dataGridView1.Rows.Clear();
+            dataGridViewSorted.Rows.Clear(); // Если у вас есть второй DataGridView, также очистите его
+            MessageBox.Show(
+                @"Дані в DataGridView було успішно очищено",
+                @"Очищення DataGridView",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Information);
+        }
+        private void ReadFromFile()
+        {
+            if (!File.Exists(FilePath))
+            {
+                MessageBox.Show(@"Файл не найден", @"Ошибка загрузки файла", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            XDocument doc = XDocument.Load(FilePath);
+            XElement root = doc.Root;
+            
+            if (_studentArray == null || _studentArray.Length < _maxIndex)
+            {
+                _studentArray = new Student[_maxIndex];
+            }
+            _currentIndex = 0;
+
+            foreach (XElement studentElement in root.Elements("Student"))
+            {
+                if (_currentIndex >= _maxIndex)
                 {
-                    AddToFile(student);
+                    MessageBox.Show(@"Перевищено розмiр масиву!", @"Помилка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    break;
+                }
+                try
+                {
+                    Student student = new Student
+                    {
+                        LastName = studentElement.Element("LastName")?.Value ?? string.Empty,
+                        FirstName = studentElement.Element("FirstName")?.Value ?? string.Empty,
+                        Height = int.Parse(studentElement.Element("Height")?.Value ?? "0"),
+                        BirthDate = DateTime.Parse(studentElement.Element("BirthDate")?.Value ?? DateTime.MinValue.ToString())
+                    };
+                    _studentArray[_currentIndex] = student;
                     AddToDataGrid(student);
+                    _currentIndex++;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($@"Помилка зчитування файлу: {ex.Message}", @"Помилка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+
+            прочитатиЗФайлуToolStripMenuItem.Enabled = false;
+            зберегтиФайлToolStripMenuItem.Enabled = false;
         }
+
     }
 }
