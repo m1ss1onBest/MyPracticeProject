@@ -1,27 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Students>
   <Student>
-    <LastName>Петросян</LastName>
-    <FirstName>Пеукп</FirstName>
-    <Height>233</Height>
-    <BirthDate>24.06.06</BirthDate>
+    <LastName>Петров</LastName>
+    <FirstName>Иван</FirstName>
+    <Height>210</Height>
+    <BirthDate>08.06.24</BirthDate>
   </Student>
   <Student>
-    <LastName>вапа</LastName>
-    <FirstName>укпукп</FirstName>
-    <Height>443</Height>
-    <BirthDate>24.06.06</BirthDate>
+    <LastName>Абрамов</LastName>
+    <FirstName>Аська</FirstName>
+    <Height>154</Height>
+    <BirthDate>08.06.24</BirthDate>
   </Student>
   <Student>
-    <LastName>уупкупк</LastName>
-    <FirstName>укппук</FirstName>
-    <Height>534</Height>
-    <BirthDate>24.06.06</BirthDate>
-  </Student>
-  <Student>
-    <LastName>тттт</LastName>
-    <FirstName>вцпп</FirstName>
-    <Height>332</Height>
-    <BirthDate>24.06.06</BirthDate>
+    <LastName>АВА</LastName>
+    <FirstName>БГБ</FirstName>
+    <Height>180</Height>
+    <BirthDate>14.07.06</BirthDate>
   </Student>
 </Students>

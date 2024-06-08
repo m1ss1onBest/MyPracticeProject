@@ -54,8 +54,16 @@ namespace MyPracticeProject {
             // setting form text
             Text = @"Облiк студентiв";
             labelTotalInfo.Text = @"Заданий одновимiрний масив з довiльною к-стью елементiв не менше 10, значення елементiв вводяться з клавiатури та записуються в файл. Виконати опрацювання масиву у вiдповiдностi з заданим варiантом завдання.\n27. Вiдомо про студентiв: прiзвище, iм'я, зрiст, дата народження: знайти студентiв по вiку студентiв з найбiльшим та найменшим ростом, середнiй зрiст по групi.";
+            labelFirstArraySize.Text = @"Розмiр масиву";
+            labelLastName.Text = @"Прiзвище";
+            labelFirstName.Text = @"Iм'я";
+            labelHeight.Text = @"Зрiст";
+            labelBirthDate.Text = @"Дата народження";
+            // setting acess to buttons
             writeInArray_ToolStripMenuItem.Enabled = false;
             зберегтиФайлToolStripMenuItem.Enabled = false;
+            toolStripTextBox1.Enabled = false;
+            знайтиToolStripMenuItem.Enabled = false;
             // setting database fields
             dataGridView1.Columns.Add("Last name", "Last name");
             dataGridView1.Columns.Add("First name", "First name");
@@ -69,8 +77,8 @@ namespace MyPracticeProject {
         }
 
         /** add student to DataGrid */
-        private void AddToDataGrid(Student student) =>
-            dataGridView1.Rows.Add(student.LastName, student.FirstName, student.Height, student.BirthDate.ToString("yy.MM.dd"));
+        private void AddToDataGrid(DataGridView dataGridView, Student student) =>
+            dataGridView.Rows.Add(student.LastName, student.FirstName, student.Height, student.BirthDate.ToString("dd.MM.yy"));
         
         /** add student to file */
         private void AddToFile(Student student)
@@ -79,7 +87,7 @@ namespace MyPracticeProject {
                 new XElement("LastName", student.LastName),
                 new XElement("FirstName", student.FirstName),
                 new XElement("Height", student.Height),
-                new XElement("BirthDate", student.BirthDate.ToString("yy.MM.dd")));
+                new XElement("BirthDate", student.BirthDate.ToString("dd.MM.yy")));
 
             //checking if the file exists and saving students
             XDocument doc;
@@ -110,6 +118,7 @@ namespace MyPracticeProject {
                 e.Handled = false;
                 textBoxArraySize.Enabled = false;
                 writeInArray_ToolStripMenuItem.Enabled = true;
+                знайтиToolStripMenuItem.Enabled = true;
                 _studentArray = new Student[_maxIndex];
                 return;
             }
@@ -189,7 +198,7 @@ namespace MyPracticeProject {
             Student student = GenerateStudent();
             _studentArray[_currentIndex] = student;
             _currentIndex++;
-            зберегтиФайлToolStripMenuItem.Enabled = true;
+            зберегтиФайлToolStripMenuItem.Enabled = Data.hasAcess;
             MessageBox.Show(@"Студент успiшно до масиву", @"Додавання студентiв", MessageBoxButtons.OK, MessageBoxIcon.Information);
             textBoxLastName.Text = textBoxFirstName.Text = textBoxHeight.Text = "";
         }
@@ -197,11 +206,11 @@ namespace MyPracticeProject {
         private void зберегтиФайлToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ClearXmlFile();
-            ClearDataGridView();
+            ClearDataGridView(dataGridView1);
             foreach (var student in _studentArray)
             {
                 if (string.IsNullOrEmpty(student.LastName)) continue;
-                AddToDataGrid(student);
+                AddToDataGrid(dataGridView1, student);
                 AddToFile(student);
             }
             прочитатиЗФайлуToolStripMenuItem.Enabled = false;
@@ -216,14 +225,13 @@ namespace MyPracticeProject {
                 MessageBox.Show(@"Файл не знайдено", @"Помилка завантаження файлу", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            
+            прочитатиЗФайлуToolStripMenuItem.Enabled = false;
             ReadFromFile();
             for (int i = 0; i < _currentIndex; i++)
             {
                 Student student = _studentArray[i];
                 _studentArray[i] = student;
             }
-            прочитатиЗФайлуToolStripMenuItem.Enabled = false;
         }
 
         ///
@@ -236,15 +244,17 @@ namespace MyPracticeProject {
             XDocument doc = new XDocument(rootElement);
             doc.Save(FilePath);
         }
-        private void ClearDataGridView()
+        private void ClearDataGridView(DataGridView gridView)
         {
-            dataGridView1.Rows.Clear();
-            dataGridViewSorted.Rows.Clear(); // Если у вас есть второй DataGridView, также очистите его
+            gridView.Rows.Clear();
+            /*
             MessageBox.Show(
+                //TODO delete this message box if required
                 @"Дані в DataGridView було успішно очищено",
                 @"Очищення DataGridView",
                 MessageBoxButtons.OK,
                 MessageBoxIcon.Information);
+                */
         }
         private void ReadFromFile()
         {
@@ -267,7 +277,8 @@ namespace MyPracticeProject {
                 if (_currentIndex >= _maxIndex)
                 {
                     MessageBox.Show(@"Перевищено розмiр масиву!", @"Помилка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    break;
+                    прочитатиЗФайлуToolStripMenuItem.Enabled = true;
+                    return;
                 }
                 try
                 {
@@ -279,7 +290,7 @@ namespace MyPracticeProject {
                         BirthDate = DateTime.Parse(studentElement.Element("BirthDate")?.Value ?? DateTime.MinValue.ToString())
                     };
                     _studentArray[_currentIndex] = student;
-                    AddToDataGrid(student);
+                    AddToDataGrid(dataGridView1, student);
                     _currentIndex++;
                 }
                 catch (Exception ex)
@@ -292,5 +303,118 @@ namespace MyPracticeProject {
             зберегтиФайлToolStripMenuItem.Enabled = false;
         }
 
+        private void поВiкуToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(@"Введiть вiк на панелi вище та натиснiть enter", "Увага!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            toolStripTextBox1.Enabled = true;
+        }
+        public static int CalculateAge(DateTime birthDate)
+        {
+            DateTime today = DateTime.Today;
+            int age = today.Year - birthDate.Year;
+            if (birthDate.Date > today.AddYears(-age))
+            {
+                age--;
+            }
+
+            return age;
+        }
+
+        private void toolStripTextBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (int)Keys.Back) return;
+            if (e.KeyChar == (int)Keys.Enter)
+            {
+                ClearDataGridView(dataGridViewSorted);
+                if (toolStripTextBox1.Text == "" && e.KeyChar == 0 ||
+                    !int.TryParse(toolStripTextBox1.Text, out var resultAge))
+                {
+                    MessageBox.Show("Невiрно введенi данi", "Помилка введення даних", MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
+                    return;
+                }
+
+                toolStripTextBox1.Enabled = false;
+                foreach (Student student in _studentArray)
+                {
+                    int age = CalculateAge(student.BirthDate);
+                    //TODO required crutch
+                    // MessageBox.Show($"student: {student.BirthDate}, calc: {age}, res: {resultAge}");
+                    if (age == resultAge)
+                    {
+                        AddToDataGrid(dataGridViewSorted, student);
+                    }
+                }
+            }
+            if (!char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void максЗрiстToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ClearDataGridView(dataGridViewSorted);
+            int maxHeight = 0;
+            for (int i = 0; i < _maxIndex; i++)
+            {
+                if (_studentArray[i].Height > maxHeight)
+                {
+                    maxHeight = _studentArray[i].Height;
+                }
+            }
+
+            foreach (Student student in _studentArray)
+            {
+                if (student.Height == maxHeight)
+                {
+                    AddToDataGrid(dataGridViewSorted, student);
+                }
+            }
+        }
+
+        private void мiнЗрiсьToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            ClearDataGridView(dataGridViewSorted);
+            int minHeight = _studentArray[0].Height;
+            int c = 0;
+            for (int i = 1; i < _maxIndex; i++)
+            {
+                if (_studentArray[i].Height < minHeight && _studentArray[i].Height > 50)
+                {
+                    minHeight = _studentArray[i].Height;
+                    c++;
+                }
+            }
+
+            foreach (Student student in _studentArray)
+            {
+                if (student.Height == minHeight)
+                {
+                    AddToDataGrid(dataGridViewSorted, student);
+                }
+            }
+            
+        }
+
+        private void середнiйЗрiстПоГрупiToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            double summa = 0;
+            for (int i = 0; i < _currentIndex; i++)
+            {
+                summa += _studentArray[i].Height;
+            }
+            summa /= _currentIndex;
+
+            MessageBox.Show($@"Середнiй зрiст по групi = {Math.Round(summa, 1)}", "Пошук по зросту", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+        }
+
+        private void очиститиToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            textBoxHeight.Text = textBoxFirstName.Text = textBoxLastName.Text = "";
+            ClearDataGridView(dataGridView1);
+            ClearDataGridView(dataGridViewSorted);
+        }
     }
 }

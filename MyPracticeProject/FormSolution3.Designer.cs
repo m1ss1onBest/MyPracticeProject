@@ -58,6 +58,7 @@ namespace MyPracticeProject
             this.мiнЗрiсьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.середнiйЗрiстПоГрупiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.вихiдToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
             this.labelTotalInfo = new System.Windows.Forms.Label();
             this.labelData = new System.Windows.Forms.Label();
             this.labelSortedData = new System.Windows.Forms.Label();
@@ -107,7 +108,6 @@ namespace MyPracticeProject
             this.labelLastName.Name = "labelLastName";
             this.labelLastName.Size = new System.Drawing.Size(292, 32);
             this.labelLastName.TabIndex = 35;
-            this.labelLastName.Text = "labelLastName";
             this.labelLastName.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // pictureBox1
@@ -143,7 +143,6 @@ namespace MyPracticeProject
             this.labelFirstName.Name = "labelFirstName";
             this.labelFirstName.Size = new System.Drawing.Size(292, 32);
             this.labelFirstName.TabIndex = 41;
-            this.labelFirstName.Text = "labelFirstName";
             this.labelFirstName.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // pictureBox3
@@ -179,7 +178,6 @@ namespace MyPracticeProject
             this.labelHeight.Name = "labelHeight";
             this.labelHeight.Size = new System.Drawing.Size(292, 32);
             this.labelHeight.TabIndex = 44;
-            this.labelHeight.Text = "labelHeight";
             this.labelHeight.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // pictureBox4
@@ -201,7 +199,6 @@ namespace MyPracticeProject
             this.labelBirthDate.Name = "labelBirthDate";
             this.labelBirthDate.Size = new System.Drawing.Size(292, 32);
             this.labelBirthDate.TabIndex = 47;
-            this.labelBirthDate.Text = "labelBirthDate";
             this.labelBirthDate.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // pictureBox5
@@ -237,25 +234,24 @@ namespace MyPracticeProject
             this.labelFirstArraySize.Name = "labelFirstArraySize";
             this.labelFirstArraySize.Size = new System.Drawing.Size(288, 32);
             this.labelFirstArraySize.TabIndex = 52;
-            this.labelFirstArraySize.Text = "labelFirstArraySize";
             this.labelFirstArraySize.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // menuStrip1
             // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { this.студентиToolStripMenuItem, this.знайтиToolStripMenuItem, this.вихiдToolStripMenuItem });
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { this.студентиToolStripMenuItem, this.знайтиToolStripMenuItem, this.вихiдToolStripMenuItem, this.toolStripTextBox1 });
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1035, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1035, 27);
             this.menuStrip1.TabIndex = 55;
             // 
             // студентиToolStripMenuItem
             // 
             this.студентиToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { this.writeInArray_ToolStripMenuItem, this.зберегтиФайлToolStripMenuItem, this.прочитатиЗФайлуToolStripMenuItem, this.очиститиToolStripMenuItem });
             this.студентиToolStripMenuItem.Name = "студентиToolStripMenuItem";
-            this.студентиToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
+            this.студентиToolStripMenuItem.Size = new System.Drawing.Size(69, 23);
             this.студентиToolStripMenuItem.Text = "Студенти";
             // 
-            // записатиУМасивToolStripMenuItem
+            // writeInArray_ToolStripMenuItem
             // 
             this.writeInArray_ToolStripMenuItem.Name = "writeInArray_ToolStripMenuItem";
             this.writeInArray_ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
@@ -281,12 +277,13 @@ namespace MyPracticeProject
             this.очиститиToolStripMenuItem.Name = "очиститиToolStripMenuItem";
             this.очиститиToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.очиститиToolStripMenuItem.Text = "Очистити";
+            this.очиститиToolStripMenuItem.Click += new System.EventHandler(this.очиститиToolStripMenuItem_Click);
             // 
             // знайтиToolStripMenuItem
             // 
             this.знайтиToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { this.поВiкуToolStripMenuItem, this.максЗрiстToolStripMenuItem, this.мiнЗрiсьToolStripMenuItem, this.середнiйЗрiстПоГрупiToolStripMenuItem });
             this.знайтиToolStripMenuItem.Name = "знайтиToolStripMenuItem";
-            this.знайтиToolStripMenuItem.Size = new System.Drawing.Size(58, 20);
+            this.знайтиToolStripMenuItem.Size = new System.Drawing.Size(58, 23);
             this.знайтиToolStripMenuItem.Text = "Знайти";
             // 
             // поВiкуToolStripMenuItem
@@ -294,41 +291,50 @@ namespace MyPracticeProject
             this.поВiкуToolStripMenuItem.Name = "поВiкуToolStripMenuItem";
             this.поВiкуToolStripMenuItem.Size = new System.Drawing.Size(201, 22);
             this.поВiкуToolStripMenuItem.Text = "По вiку";
+            this.поВiкуToolStripMenuItem.Click += new System.EventHandler(this.поВiкуToolStripMenuItem_Click);
             // 
             // максЗрiстToolStripMenuItem
             // 
             this.максЗрiстToolStripMenuItem.Name = "максЗрiстToolStripMenuItem";
             this.максЗрiстToolStripMenuItem.Size = new System.Drawing.Size(201, 22);
             this.максЗрiстToolStripMenuItem.Text = "Макс. зрiст";
+            this.максЗрiстToolStripMenuItem.Click += new System.EventHandler(this.максЗрiстToolStripMenuItem_Click);
             // 
             // мiнЗрiсьToolStripMenuItem
             // 
             this.мiнЗрiсьToolStripMenuItem.Name = "мiнЗрiсьToolStripMenuItem";
             this.мiнЗрiсьToolStripMenuItem.Size = new System.Drawing.Size(201, 22);
             this.мiнЗрiсьToolStripMenuItem.Text = "Мiн. зрiст";
+            this.мiнЗрiсьToolStripMenuItem.Click += new System.EventHandler(this.мiнЗрiсьToolStripMenuItem_Click_1);
             // 
             // середнiйЗрiстПоГрупiToolStripMenuItem
             // 
             this.середнiйЗрiстПоГрупiToolStripMenuItem.Name = "середнiйЗрiстПоГрупiToolStripMenuItem";
             this.середнiйЗрiстПоГрупiToolStripMenuItem.Size = new System.Drawing.Size(201, 22);
             this.середнiйЗрiстПоГрупiToolStripMenuItem.Text = "Середнiй зрiст по групi";
+            this.середнiйЗрiстПоГрупiToolStripMenuItem.Click += new System.EventHandler(this.середнiйЗрiстПоГрупiToolStripMenuItem_Click_1);
             // 
             // вихiдToolStripMenuItem
             // 
             this.вихiдToolStripMenuItem.Name = "вихiдToolStripMenuItem";
-            this.вихiдToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
+            this.вихiдToolStripMenuItem.Size = new System.Drawing.Size(48, 23);
             this.вихiдToolStripMenuItem.Text = "Вихiд";
             this.вихiдToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click_1);
+            // 
+            // toolStripTextBox1
+            // 
+            this.toolStripTextBox1.Name = "toolStripTextBox1";
+            this.toolStripTextBox1.Size = new System.Drawing.Size(100, 23);
+            this.toolStripTextBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.toolStripTextBox1_KeyPress);
             // 
             // labelTotalInfo
             // 
             this.labelTotalInfo.Font = new System.Drawing.Font("e-Ukraine Head", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelTotalInfo.Location = new System.Drawing.Point(91, 24);
+            this.labelTotalInfo.Location = new System.Drawing.Point(90, 27);
             this.labelTotalInfo.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.labelTotalInfo.Name = "labelTotalInfo";
-            this.labelTotalInfo.Size = new System.Drawing.Size(855, 111);
+            this.labelTotalInfo.Size = new System.Drawing.Size(855, 108);
             this.labelTotalInfo.TabIndex = 56;
-            this.labelTotalInfo.Text = "labelTotalInfo";
             // 
             // labelData
             // 
@@ -338,7 +344,6 @@ namespace MyPracticeProject
             this.labelData.Name = "labelData";
             this.labelData.Size = new System.Drawing.Size(333, 32);
             this.labelData.TabIndex = 59;
-            this.labelData.Text = "labelData";
             this.labelData.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // labelSortedData
@@ -349,7 +354,6 @@ namespace MyPracticeProject
             this.labelSortedData.Name = "labelSortedData";
             this.labelSortedData.Size = new System.Drawing.Size(499, 32);
             this.labelSortedData.TabIndex = 60;
-            this.labelSortedData.Text = "labelSortedData";
             this.labelSortedData.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // dateTimePicker1
@@ -433,6 +437,8 @@ namespace MyPracticeProject
             this.ResumeLayout(false);
             this.PerformLayout();
         }
+
+        private System.Windows.Forms.ToolStripTextBox toolStripTextBox1;
 
         private System.Windows.Forms.DataGridView dataGridViewSorted;
 
