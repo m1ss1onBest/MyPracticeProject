@@ -87,6 +87,12 @@
     <Compile Include="FormSolution3.Designer.cs">
       <DependentUpon>FormSolution3.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormSolution4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSolution4.Designer.cs">
+      <DependentUpon>FormSolution4.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormManager.resx">
@@ -106,6 +112,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormSolution3.resx">
       <DependentUpon>FormSolution3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSolution4.resx">
+      <DependentUpon>FormSolution4.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

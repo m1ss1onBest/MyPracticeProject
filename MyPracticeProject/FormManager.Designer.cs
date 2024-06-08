@@ -87,35 +87,37 @@ namespace MyPracticeProject
             // задача1ToolStripMenuItem
             // 
             this.задача1ToolStripMenuItem.Name = "задача1ToolStripMenuItem";
-            this.задача1ToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
+            this.задача1ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.задача1ToolStripMenuItem.Text = "Задача 1";
             this.задача1ToolStripMenuItem.Click += new System.EventHandler(this.задача1ToolStripMenuItem_Click);
             // 
             // задача2ToolStripMenuItem
             // 
             this.задача2ToolStripMenuItem.Name = "задача2ToolStripMenuItem";
-            this.задача2ToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
+            this.задача2ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.задача2ToolStripMenuItem.Text = "Задача 2";
             this.задача2ToolStripMenuItem.Click += new System.EventHandler(this.задача2ToolStripMenuItem_Click);
             // 
             // задача3ToolStripMenuItem
             // 
             this.задача3ToolStripMenuItem.Name = "задача3ToolStripMenuItem";
-            this.задача3ToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
+            this.задача3ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.задача3ToolStripMenuItem.Text = "Задача 3";
             this.задача3ToolStripMenuItem.Click += new System.EventHandler(this.задача3ToolStripMenuItem_Click);
             // 
             // задача4ToolStripMenuItem
             // 
             this.задача4ToolStripMenuItem.Name = "задача4ToolStripMenuItem";
-            this.задача4ToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
+            this.задача4ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.задача4ToolStripMenuItem.Text = "Задача 4";
+            this.задача4ToolStripMenuItem.Click += new System.EventHandler(this.задача4ToolStripMenuItem_Click);
             // 
             // задача5ToolStripMenuItem
             // 
             this.задача5ToolStripMenuItem.Name = "задача5ToolStripMenuItem";
-            this.задача5ToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
+            this.задача5ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.задача5ToolStripMenuItem.Text = "Задача 5";
+            this.задача5ToolStripMenuItem.Click += new System.EventHandler(this.задача5ToolStripMenuItem_Click);
             // 
             // додатковоToolStripMenuItem
             // 
