@@ -56,7 +56,6 @@ namespace MyPracticeProject
             this.toolStrip_FILE_STUD_find = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip_FILE_exit = new System.Windows.Forms.ToolStripMenuItem();
             this.textboxHelp = new System.Windows.Forms.ToolStripTextBox();
-            this.toolStrip_FAQ = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridViewStudents = new System.Windows.Forms.DataGridView();
             this.labelVariantDescription = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -209,7 +208,7 @@ namespace MyPracticeProject
             // 
             // menuStrip
             // 
-            this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { this.toolStrip_FILE, this.textboxHelp, this.toolStrip_FAQ });
+            this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { this.toolStrip_FILE, this.textboxHelp });
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
             this.menuStrip.Size = new System.Drawing.Size(1006, 27);
@@ -294,14 +293,9 @@ namespace MyPracticeProject
             this.textboxHelp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textboxHelp_KeyPress);
             this.textboxHelp.MouseEnter += new System.EventHandler(this.textboxHelp_MouseEnter);
             // 
-            // toolStrip_FAQ
-            // 
-            this.toolStrip_FAQ.Name = "toolStrip_FAQ";
-            this.toolStrip_FAQ.Size = new System.Drawing.Size(91, 23);
-            this.toolStrip_FAQ.Text = "toolStrip_FAQ";
-            // 
             // dataGridViewStudents
             // 
+            this.dataGridViewStudents.BackgroundColor = System.Drawing.Color.LightGray;
             this.dataGridViewStudents.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewStudents.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewStudents.GridColor = System.Drawing.SystemColors.ControlDarkDark;
@@ -327,6 +321,8 @@ namespace MyPracticeProject
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1006, 588);
             this.Controls.Add(this.labelVariantDescription);
             this.Controls.Add(this.dataGridViewStudents);
@@ -343,8 +339,10 @@ namespace MyPracticeProject
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.textBoxFullName);
             this.Controls.Add(this.menuStrip);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.menuStrip;
             this.Name = "FormSolution5";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormSolution5";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormSolution5_FormClosing);
             this.Load += new System.EventHandler(this.FormSolution5_Load);
@@ -362,7 +360,6 @@ namespace MyPracticeProject
         private System.Windows.Forms.Label labelVariantDescription;
 
         private System.Windows.Forms.ToolStripTextBox textboxHelp;
-        private System.Windows.Forms.ToolStripMenuItem toolStrip_FAQ;
 
         private System.Windows.Forms.DataGridView dataGridViewStudents;
 

@@ -261,7 +261,7 @@ namespace MyPracticeProject
             // 
             this.labelName5.BackColor = System.Drawing.Color.Transparent;
             this.labelName5.Font = new System.Drawing.Font("e-Ukraine Head", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelName5.ForeColor = System.Drawing.Color.Gold;
+            this.labelName5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(133)))), ((int)(((byte)(255)))));
             this.labelName5.Location = new System.Drawing.Point(0, 490);
             this.labelName5.Name = "labelName5";
             this.labelName5.Size = new System.Drawing.Size(340, 34);

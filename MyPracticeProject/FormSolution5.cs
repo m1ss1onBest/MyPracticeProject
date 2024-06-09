@@ -75,7 +75,6 @@ namespace MyPracticeProject
             toolStrip_FILE_STUD_edit.Text = @"Редагувати студента";
             toolStrip_FILE_STUD_delete.Text = @"Видалити студента";
             toolStrip_FILE_STUD_find.Text = @"Знайти за унiкальним зростом та вагою";
-            toolStrip_FAQ.Text = @"Про програму";
             toolStrip_FILE_exit.Text = @"Вихiд";
             
             // setting data grid
