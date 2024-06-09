@@ -18,6 +18,7 @@ namespace MyPracticeProject
         private bool isPasswordAcceptable = false;
         private void Form1_Load(object sender, EventArgs e)
         {
+
             //setting colours
             labelInfo.Text = @"Проєкт";
             panel1.BackColor = Data.Pal.RegisterFormColor;
@@ -39,7 +40,6 @@ namespace MyPracticeProject
             buttonLogIn.Text = @"Увійти";
             buttonAsGuest.Text = @"Увійти як гість";
             buttonAsGuest.FlatAppearance.BorderSize = 0;
-            checkBoxAgree.Text = @"Зберегти мене";
             buttonLogIn.BackColor = Data.Pal.SuccessColor;
             buttonAsGuest.ForeColor = Data.Pal.SuccessColor;
 

@@ -28,7 +28,7 @@ namespace MyPracticeProject
       
       private const String Password = "5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8";
       //TODO only dev mode
-      public static bool hasAcess = true;
+      public static bool hasAcess = false;
       public static string Email = "susamogus@gmail.com";
 
       public static void ShowAccessRequired()

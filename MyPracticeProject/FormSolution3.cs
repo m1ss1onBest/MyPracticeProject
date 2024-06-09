@@ -51,6 +51,8 @@ namespace MyPracticeProject {
         /** form load function */
         private void FormSolution3_Load(object sender, EventArgs e)
         {
+            MessageBox.Show("Щоб встановити розмiр масиву, введiть значення у вiдповiдне поле та натиснiть Enter",
+                "Увага!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             // setting form text
             Text = @"Облiк студентiв";
             labelTotalInfo.Text = @"Заданий одновимiрний масив з довiльною к-стью елементiв не менше 10, значення елементiв вводяться з клавiатури та записуються в файл. Виконати опрацювання масиву у вiдповiдностi з заданим варiантом завдання.\n27. Вiдомо про студентiв: прiзвище, iм'я, зрiст, дата народження: знайти студентiв по вiку студентiв з найбiльшим та найменшим ростом, середнiй зрiст по групi.";

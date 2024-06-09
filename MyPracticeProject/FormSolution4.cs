@@ -15,6 +15,8 @@ namespace MyPracticeProject
             FormSolution4 formSolution4 = new FormSolution4();
             formSolution4.Show();
         }
+        
+        private void FormSolution4_FormClosing(object sender, FormClosingEventArgs e) => FormManager.Start();
 
         private void обчислитиToolStripMenuItem_Click(object sender, EventArgs e)
         {

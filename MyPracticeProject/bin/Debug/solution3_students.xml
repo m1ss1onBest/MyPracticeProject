@@ -18,4 +18,10 @@
     <Height>180</Height>
     <BirthDate>14.07.06</BirthDate>
   </Student>
+  <Student>
+    <LastName>Щука</LastName>
+    <FirstName>Степан</FirstName>
+    <Height>214</Height>
+    <BirthDate>09.06.24</BirthDate>
+  </Student>
 </Students>

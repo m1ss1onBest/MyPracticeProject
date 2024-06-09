@@ -43,7 +43,6 @@
             this.buttonLogIn = new System.Windows.Forms.Button();
             this.buttonAsGuest = new System.Windows.Forms.Button();
             this.labelEmail = new System.Windows.Forms.Label();
-            this.checkBoxAgree = new System.Windows.Forms.CheckBox();
             this.pictureBoxEmailLabel = new System.Windows.Forms.PictureBox();
             this.textBoxEmail = new System.Windows.Forms.TextBox();
             this.pictureBoxPasswordLabel = new System.Windows.Forms.PictureBox();
@@ -232,17 +231,6 @@
             this.labelEmail.Text = "labelEmail";
             this.labelEmail.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
-            // checkBoxAgree
-            // 
-            this.checkBoxAgree.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.checkBoxAgree.Font = new System.Drawing.Font("e-Ukraine Head", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkBoxAgree.Location = new System.Drawing.Point(498, 539);
-            this.checkBoxAgree.Name = "checkBoxAgree";
-            this.checkBoxAgree.Size = new System.Drawing.Size(144, 19);
-            this.checkBoxAgree.TabIndex = 12;
-            this.checkBoxAgree.Text = "checkBoxAgree";
-            this.checkBoxAgree.UseVisualStyleBackColor = true;
-            // 
             // pictureBoxEmailLabel
             // 
             this.pictureBoxEmailLabel.BackColor = System.Drawing.Color.Transparent;
@@ -322,7 +310,6 @@
             this.Controls.Add(this.textBoxPassword);
             this.Controls.Add(this.pictureBoxEmailLabel);
             this.Controls.Add(this.textBoxEmail);
-            this.Controls.Add(this.checkBoxAgree);
             this.Controls.Add(this.labelEmail);
             this.Controls.Add(this.buttonAsGuest);
             this.Controls.Add(this.buttonLogIn);
@@ -367,7 +354,6 @@
         private System.Windows.Forms.Label label2;
 
         private System.Windows.Forms.Label labelEmail;
-        private System.Windows.Forms.CheckBox checkBoxAgree;
 
         private System.Windows.Forms.Label labelProjectInformation;
 
