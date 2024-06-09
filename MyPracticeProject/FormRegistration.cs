@@ -14,11 +14,9 @@ namespace MyPracticeProject
     {
         public FormRegistration() => InitializeComponent();
 
-        private const string AllowedPassword = "1234567890qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM!~@#$;^&%*(){}[];?-_";
-        private bool isPasswordAcceptable = false;
+
         private void Form1_Load(object sender, EventArgs e)
         {
-
             //setting colours
             labelInfo.Text = @"Проєкт";
             panel1.BackColor = Data.Pal.RegisterFormColor;
@@ -46,10 +44,6 @@ namespace MyPracticeProject
             //textBox design
             textBoxPassword.PasswordChar = '•';
             textBoxEmail.Text = textBoxPassword.Text = "";
-            
-            
-            //TEST REGION
-            // FormSolution1.Start();
         }
         
         private void SetDefault(TextBox textBox, PictureBox pictureBox, Label textEdit = null)
@@ -95,39 +89,39 @@ namespace MyPracticeProject
                 if (textBoxPassword.Text.Length < 9)
                 {
                     SetWarning(textBoxPassword, pictureBoxPasswordLabel, labelPasswordWarning);
-                    isPasswordAcceptable = false;
+                    Data.isPasswordAcceptable = false;
                     e.Handled = false;
                     return;
                 }
                 SetAcceptable(textBoxPassword, pictureBoxPasswordLabel, labelPasswordWarning);
-                isPasswordAcceptable = true;
+                Data.isPasswordAcceptable = true;
                 e.Handled = false;
                 return;
             }
 
             if (textBoxPassword.Text.Length >= 20 ||
-                !AllowedPassword.Contains(e.KeyChar))
+                !Data.AllowedPassword.Contains(e.KeyChar))
             {
                 e.Handled = true;
                 SetWarning(textBoxPassword, pictureBoxPasswordLabel, labelPasswordWarning);
-                isPasswordAcceptable = false;
+                Data.isPasswordAcceptable = false;
                 return;
             }
             if (textBoxPassword.Text.Length < 7) 
             { 
                 SetWarning(textBoxPassword, pictureBoxPasswordLabel, labelPasswordWarning);
-                isPasswordAcceptable = false;
+                Data.isPasswordAcceptable = false;
                 return;
             }
             SetAcceptable(textBoxPassword, pictureBoxPasswordLabel, labelPasswordWarning);
-            isPasswordAcceptable = true;
+            Data.isPasswordAcceptable = true;
             e.Handled = false;
         }
 
         private void buttonLogIn_Click(object sender, EventArgs e)
         {
             bool acceptable = true;
-            if (!Data.MatchPassword(textBoxPassword.Text) || !isPasswordAcceptable)
+            if (!Data.MatchPassword(textBoxPassword.Text) || !Data.isPasswordAcceptable)
             {
                 Data.SetError(textBoxPassword, pictureBoxPasswordLabel, "Пароль невірний", labelPasswordWarning);
                 acceptable = false;
