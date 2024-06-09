@@ -61,16 +61,17 @@ namespace MyPracticeProject
             Visible = false;
             FormSolution3.Start();
         }
-
-        private void задача5ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
- 
-        }
-
+        
         private void задача4ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Visible = false;
             FormSolution4.Start();
+        }
+
+        private void задача5ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Visible = false;
+            FormSolution5.Start();
         }
     }
 }
