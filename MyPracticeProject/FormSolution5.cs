@@ -351,33 +351,40 @@ namespace MyPracticeProject
 
         private void toolStrip_FILE_STUD_find_Click(object sender, EventArgs e)
         {
-            int height = Students[0].Height, weight = Students[0].Weight;
-            for (int i = 1; i < Students.Count; i++)
+            try
             {
-                height ^= Students[i].Height;
-                weight ^= Students[i].Weight;
-            }
-
-            List<Student> sorted = new List<Student>();
-            foreach (Student student in Students)
-            {
-                if (student.Height == height && student.Weight == weight)
+                int height = Students[0].Height, weight = Students[0].Weight;
+                for (int i = 1; i < Students.Count; i++)
                 {
-                    sorted.Add(student);
+                    height ^= Students[i].Height;
+                    weight ^= Students[i].Weight;
+                }
+
+                List<Student> sorted = new List<Student>();
+                foreach (Student student in Students)
+                {
+                    if (student.Height == height && student.Weight == weight)
+                    {
+                        sorted.Add(student);
+                    }
+                }
+
+                if (sorted.Count == 0)
+                {
+                    MessageBox.Show("Немає студентiв що задовiльняють запиту", "Увага!", MessageBoxButtons.OK,
+                        MessageBoxIcon.Warning);
+                    return;
+                }
+
+                dataGridViewStudents.Rows.Clear();
+                foreach (Student student in sorted)
+                {
+                    AddToDataGrid(dataGridViewStudents, student);
                 }
             }
-
-            if (sorted.Count == 0)
+            catch
             {
-                MessageBox.Show("Немає студентiв що задовiльняють запиту", "Увага!", MessageBoxButtons.OK,
-                    MessageBoxIcon.Warning);
                 return;
-            }
-            
-            dataGridViewStudents.Rows.Clear();
-            foreach (Student student in sorted)
-            {
-                AddToDataGrid(dataGridViewStudents, student);
             }
         }
     }
