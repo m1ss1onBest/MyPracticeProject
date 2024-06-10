@@ -143,6 +143,12 @@ namespace MyPracticeProject
         // creates file
         private void CreateFile_ToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            if (Students.Count < 10)
+            {
+                MessageBox.Show("Кiлькiсть записiв менша 10", "неможливо записати файл", MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
+                return;
+            }
             SaveFileDialog dialog = new SaveFileDialog();
             dialog.Filter = @"XML файл (*.xml)|*.xml";
             dialog.Title = @"Зберегти файл як";
@@ -373,40 +379,55 @@ namespace MyPracticeProject
         // selecting operation find
         private void toolStrip_FILE_STUD_find_Click(object sender, EventArgs e)
         {
-            try
+            // Подсчет количества каждого роста
+            var heightCounts = new int[Students.Count];
+            for (int i = 0; i < Students.Count; i++)
             {
-                int height = Students[0].Height, weight = Students[0].Weight;
-                for (int i = 1; i < Students.Count; i++)
+                int count = 0;
+                for (int j = 0; j < Students.Count; j++)
                 {
-                    height ^= Students[i].Height;
-                    weight ^= Students[i].Weight;
-                }
-
-                List<Student> sorted = new List<Student>();
-                foreach (Student student in Students)
-                {
-                    if (student.Height == height && student.Weight == weight)
+                    if (Students[i].Height == Students[j].Height)
                     {
-                        sorted.Add(student);
+                        count++;
                     }
                 }
+                heightCounts[i] = count;
+            }
 
-                if (sorted.Count == 0)
+            var weightCounts = new int[Students.Count];
+            for (int i = 0; i < Students.Count; i++)
+            {
+                int count = 0;
+                for (int j = 0; j < Students.Count; j++)
                 {
-                    MessageBox.Show("Немає студентiв що задовiльняють запиту", "Увага!", MessageBoxButtons.OK,
-                        MessageBoxIcon.Warning);
-                    return;
+                    if (Students[i].Weight == Students[j].Weight)
+                    {
+                        count++;
+                    }
                 }
+                weightCounts[i] = count;
+            }
 
-                dataGridViewStudents.Rows.Clear();
-                foreach (Student student in sorted)
+            var uniqueStudents = new List<Student>();
+            for (int i = 0; i < Students.Count; i++)
+            {
+                if (heightCounts[i] == 1 && weightCounts[i] == 1)
                 {
-                    AddToDataGrid(dataGridViewStudents, student);
+                    uniqueStudents.Add(Students[i]);
                 }
             }
-            catch
+
+            if (uniqueStudents.Count == 0)
             {
+                MessageBox.Show("Немає студентiв, що задовiльняють запиту", "Не знайдено", MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
                 return;
+            }
+            
+            dataGridViewStudents.Rows.Clear();
+            foreach (Student student in uniqueStudents)
+            {
+                AddToDataGrid(dataGridViewStudents, student);
             }
         }
 

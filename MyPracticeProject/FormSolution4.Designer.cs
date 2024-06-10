@@ -107,7 +107,7 @@ namespace MyPracticeProject
             this.labelTotalInfo.Name = "labelTotalInfo";
             this.labelTotalInfo.Size = new System.Drawing.Size(516, 108);
             this.labelTotalInfo.TabIndex = 57;
-            this.labelTotalInfo.Text = "Сформувати двовимiрний масив та виконати обчислення згiдно варiанту:\r\n- обчислити" + " суму квадратiв дiагональних елементiв матрицi.\r\n";
+            this.labelTotalInfo.Text = "Сформувати двовимiрний масив та виконати обчислення згiдно варiанту:\r\n- обчислити" + " суму квадратiв дiагональних елементiв матрицi.\r\nтип даних - цiлi\r\n";
             // 
             // FormSolution4
             // 
@@ -122,7 +122,7 @@ namespace MyPracticeProject
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FormSolution4";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Завдання 5 - Матриця";
+            this.Text = "Завдання 4 - Матриця";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormSolution4_FormClosing);
             this.Load += new System.EventHandler(this.FormSolution4_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

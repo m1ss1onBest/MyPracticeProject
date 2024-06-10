@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="windows-1251" standalone="yes"?>
+<Students>
+  <Student>
+    <FullName>Щука С. П.</FullName>
+    <Age>34</Age>
+    <Height>190</Height>
+    <Weight>84</Weight>
+  </Student>
+  <Student>
+    <FullName>Степаненко В. В.</FullName>
+    <Age>21</Age>
+    <Height>154</Height>
+    <Weight>204</Weight>
+  </Student>
+  <Student>
+    <FullName>Петров I. П.</FullName>
+    <Age>21</Age>
+    <Height>210</Height>
+    <Weight>84</Weight>
+  </Student>
+  <Student>
+    <FullName>Зайчук</FullName>
+    <Age>31</Age>
+    <Height>194</Height>
+    <Weight>100</Weight>
+  </Student>
+  <Student>
+    <FullName>Петренко</FullName>
+    <Age>32</Age>
+    <Height>194</Height>
+    <Weight>100</Weight>
+  </Student>
+  <Student>
+    <FullName>Джугашвiлi Й. В.</FullName>
+    <Age>59</Age>
+    <Height>162</Height>
+    <Weight>70</Weight>
+  </Student>
+  <Student>
+    <FullName>Марявенюк Н. С.</FullName>
+    <Age>19</Age>
+    <Height>155</Height>
+    <Weight>84</Weight>
+  </Student>
+  <Student>
+    <FullName>Ажилбиров Ф. Х.</FullName>
+    <Age>28</Age>
+    <Height>182</Height>
+    <Weight>92</Weight>
+  </Student>
+  <Student>
+    <FullName>Авраменко С. В.</FullName>
+    <Age>50</Age>
+    <Height>156</Height>
+    <Weight>134</Weight>
+  </Student>
+  <Student>
+    <FullName>Олександров О. О.</FullName>
+    <Age>45</Age>
+    <Height>157</Height>
+    <Weight>90</Weight>
+  </Student>
+</Students>
