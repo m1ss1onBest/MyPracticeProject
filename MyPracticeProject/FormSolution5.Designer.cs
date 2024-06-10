@@ -324,7 +324,7 @@ namespace MyPracticeProject
             this.labelVariantDescription.Location = new System.Drawing.Point(85, 43);
             this.labelVariantDescription.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelVariantDescription.Name = "labelVariantDescription";
-            this.labelVariantDescription.Size = new System.Drawing.Size(815, 145);
+            this.labelVariantDescription.Size = new System.Drawing.Size(815, 183);
             this.labelVariantDescription.TabIndex = 65;
             this.labelVariantDescription.Text = "labelVariantDescription";
             this.labelVariantDescription.TextAlign = System.Drawing.ContentAlignment.TopCenter;
