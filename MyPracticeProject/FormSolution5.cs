@@ -13,13 +13,19 @@ namespace MyPracticeProject
 {
     public partial class FormSolution5 : Form
     {
+        // student data type
         private struct Student
         {
+            // used as student's full name (Lastname N. F.)
             public string FullName { set; get; }
+            // student's age
             public UInt16 Age { set; get; }
+            // student's height
             public UInt16 Height { set; get; } 
+            // student's weight
             public UInt16 Weight { set; get; }
-
+            
+            // default constructor
             public Student(string fullName, UInt16 age, UInt16 height, UInt16 weight)
             {
                 FullName = fullName;
@@ -28,42 +34,55 @@ namespace MyPracticeProject
                 Weight = weight;
             }
         }
+        
+        // list of student's used to contain student data type
         private List<Student> Students { set; get; }
 
-        private enum Operations { none, edit, find, delete };
+        // enumeration of poss
+        private enum Operations { none, edit, find, delete }
+        // current operation, none by default
         private Operations CurrentOperation = Operations.none;
         
         //
         // REGION form initialization
         //
-        public FormSolution5()
-        {
-            InitializeComponent();
-        }
+        
+        // Tab Control init
+        public FormSolution5() => InitializeComponent();
+        
+        // used to start form from another form
         public static void Start()
         {
             var formSolution5 = new FormSolution5();
             formSolution5.Show();
         }
+        
+        // exit form
         private void toolStrip_FILE_exit_Click(object sender, EventArgs e) => Close();
+        
+        // coming back to solution manager
         private void FormSolution5_FormClosing(object sender, FormClosingEventArgs e) => FormManager.Start();
+        
+        // default form components initialization
         private void FormSolution5_Load(object sender, EventArgs e)
         {
             // setting variables
             Students = new List<Student>();
+            
             // setting label text
             labelFullName.Text = @"ПIБ";
             labelAge.Text = @"Вiк";
             labelHeight.Text = @"Зрiст";
             labelWeight.Text = @"Вага";
-
-
+            
             labelVariantDescription.Text =
                 "Створити і вивести на екран  масив з довільною кількістю записів (не меньше 10) по індивідуальному завданню. Записати в файл, визначити структуру файла. Знайти в файлі і вивести на екран результати обробки запитів. " +
                 "Програма має виводити на екран меню з командами: 1 - створення файлу 2 - перегляд файлу 3 - додавання до файлу 4 - обробка файлу( додавання, редагування, вилучення записів, пошук, обчислення) 5 – вихід ВАРІАНТИ ЗАВДАНЬ \n\u211627 Список студентів групи містить наступну інформацію: П.І.Б.,вік, ріст і вага. Вивести П.І.Б. студентів, ріст і вага яких є в списку унікальними(тобто не повторюються). До завдання 5 оформити звіт про технологію виконання завдання за зразком";
+     
             // setting text boxes
             textBoxFullName.Text = textBoxAge.Text = textBoxHeight.Text = textBoxWeight.Text = textboxHelp.Text = "";
             textboxHelp.Enabled = false;
+            
             // setting buttons
             toolStrip_FILE.Text = @"Файл";
             toolStrip_FILE_new.Text = @"Створити файл";
@@ -88,11 +107,13 @@ namespace MyPracticeProject
         // REGION Data
         //
         
+        // adding student to data grid view
         private void AddToDataGrid(DataGridView dataGridView, Student student)
         {
             dataGridView.Rows.Add(student.FullName, student.Age, student.Height, student.Weight);
         }
 
+        // adding student to file
         private void AddToFile(string filePath, Student student)
         {
             XElement studentElement = new XElement("Student",
@@ -116,6 +137,9 @@ namespace MyPracticeProject
 
         //
         // REGION File
+        //
+        
+        // creates file
         private void CreateFile_ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             SaveFileDialog dialog = new SaveFileDialog();
@@ -145,6 +169,7 @@ namespace MyPracticeProject
             }
         }
 
+        // reading data from file
         private void LoadFile_ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             OpenFileDialog dialog = new OpenFileDialog();
@@ -175,6 +200,7 @@ namespace MyPracticeProject
             }
         }
         
+        // add data from array to file
         private void toolStrip_FILE_add_Click(object sender, EventArgs e)
         {
             OpenFileDialog dialog = new OpenFileDialog();
@@ -198,6 +224,7 @@ namespace MyPracticeProject
         // REGION Student
         //
 
+        // add new student to data
         private void NewStudent_StripMenuItem_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(textBoxFullName.Text) ||
@@ -229,11 +256,7 @@ namespace MyPracticeProject
             AddToDataGrid(dataGridViewStudents, student);
         }
 
-        private void FindStudentsByParams()
-        {
-            
-        }
-
+        // setting text box visible
         private void SetTextBoxHelp()
         {
             CurrentOperation = Operations.find;
@@ -241,22 +264,16 @@ namespace MyPracticeProject
             textboxHelp.ForeColor = Color.Red;
             textboxHelp.Text = @"Ось тут";
             MessageBox.Show("Введiть у текстове поле зверху ПIБ студента та натиснiть enter", "Увага!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
         }
-
-        private void toolStrip_FILE_STUD_edit_Click(object sender, EventArgs e)
-        {
-            SetTextBoxHelp();
-            CurrentOperation = Operations.edit;
-            
-        }
-
+        
+        // setting tool strip text box default when mouse enter
         private void textboxHelp_MouseEnter(object sender, EventArgs e)
         {
             textboxHelp.ForeColor = Color.Black;
             textboxHelp.Text = "";
         }
 
+        // analyzing input key values
         private void textboxHelp_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (int)Keys.Enter)
@@ -268,12 +285,7 @@ namespace MyPracticeProject
                 }
 
                 Student stud;
-                
                 UInt16 age, height, weight;
-
-         
-
-                
                 
                 switch (CurrentOperation)
                 {
@@ -342,13 +354,22 @@ namespace MyPracticeProject
                 }
             }
         }
-
+        
+        // setting operation edit
+        private void toolStrip_FILE_STUD_edit_Click(object sender, EventArgs e)
+        {
+            SetTextBoxHelp();
+            CurrentOperation = Operations.edit;
+        }
+        
+        // selecting operation delete
         private void toolStrip_FILE_STUD_delete_Click(object sender, EventArgs e)
         {
             SetTextBoxHelp();
             CurrentOperation = Operations.delete;
         }
 
+        // selecting operation find
         private void toolStrip_FILE_STUD_find_Click(object sender, EventArgs e)
         {
             try
@@ -385,6 +406,62 @@ namespace MyPracticeProject
             catch
             {
                 return;
+            }
+        }
+
+        private void новийФайлToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CreateFile_ToolStripMenuItem_Click(sender, e);
+        }
+
+        private void прочитатиФайлToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LoadFile_ToolStripMenuItem_Click(sender, e);
+        }
+        
+        private void додатиУФайлToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            toolStrip_FILE_add_Click(sender, e);
+        }
+
+        private void додатиНовогоСтудентаToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            NewStudent_StripMenuItem_Click(sender, e);
+        }
+
+        private void редагуватиСтудентаToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            toolStrip_FILE_STUD_edit_Click(sender, e);
+        }
+
+        private void видалитиСтудентаToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            toolStrip_FILE_STUD_delete_Click(sender, e);
+        }
+
+        private void пошукToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            toolStrip_FILE_STUD_find_Click(sender, e);
+        }
+
+        private void вихiдToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void FormSolution5_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                contextMenuStrip1.Show(this, e.Location);
+            }
+        }
+
+        private void labelVariantDescription_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                contextMenuStrip1.Show(this, e.Location);
             }
         }
     }

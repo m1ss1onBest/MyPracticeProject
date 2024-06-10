@@ -31,6 +31,7 @@ namespace MyPracticeProject
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormSolution5));
             this.labelFullName = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -58,12 +59,23 @@ namespace MyPracticeProject
             this.textboxHelp = new System.Windows.Forms.ToolStripTextBox();
             this.dataGridViewStudents = new System.Windows.Forms.DataGridView();
             this.labelVariantDescription = new System.Windows.Forms.Label();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.новийФайлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.прочитатиФайлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.додатиУФайлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.опрацюванняToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.додатиНовогоСтудентаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.редагуватиСтудентаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.видалитиСтудентаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.пошукToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.вихiдToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.menuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStudents)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // labelFullName
@@ -316,6 +328,76 @@ namespace MyPracticeProject
             this.labelVariantDescription.TabIndex = 65;
             this.labelVariantDescription.Text = "labelVariantDescription";
             this.labelVariantDescription.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.labelVariantDescription.MouseDown += new System.Windows.Forms.MouseEventHandler(this.labelVariantDescription_MouseDown);
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { this.новийФайлToolStripMenuItem, this.прочитатиФайлToolStripMenuItem, this.додатиУФайлToolStripMenuItem, this.опрацюванняToolStripMenuItem, this.вихiдToolStripMenuItem });
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(167, 114);
+            // 
+            // новийФайлToolStripMenuItem
+            // 
+            this.новийФайлToolStripMenuItem.Name = "новийФайлToolStripMenuItem";
+            this.новийФайлToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
+            this.новийФайлToolStripMenuItem.Text = "Новий файл";
+            this.новийФайлToolStripMenuItem.Click += new System.EventHandler(this.новийФайлToolStripMenuItem_Click);
+            // 
+            // прочитатиФайлToolStripMenuItem
+            // 
+            this.прочитатиФайлToolStripMenuItem.Name = "прочитатиФайлToolStripMenuItem";
+            this.прочитатиФайлToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
+            this.прочитатиФайлToolStripMenuItem.Text = "Прочитати файл";
+            this.прочитатиФайлToolStripMenuItem.Click += new System.EventHandler(this.прочитатиФайлToolStripMenuItem_Click);
+            // 
+            // додатиУФайлToolStripMenuItem
+            // 
+            this.додатиУФайлToolStripMenuItem.Name = "додатиУФайлToolStripMenuItem";
+            this.додатиУФайлToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
+            this.додатиУФайлToolStripMenuItem.Text = "Додати у файл";
+            this.додатиУФайлToolStripMenuItem.Click += new System.EventHandler(this.додатиУФайлToolStripMenuItem_Click);
+            // 
+            // опрацюванняToolStripMenuItem
+            // 
+            this.опрацюванняToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { this.додатиНовогоСтудентаToolStripMenuItem, this.редагуватиСтудентаToolStripMenuItem, this.видалитиСтудентаToolStripMenuItem, this.пошукToolStripMenuItem });
+            this.опрацюванняToolStripMenuItem.Name = "опрацюванняToolStripMenuItem";
+            this.опрацюванняToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
+            this.опрацюванняToolStripMenuItem.Text = "Опрацювання";
+            // 
+            // додатиНовогоСтудентаToolStripMenuItem
+            // 
+            this.додатиНовогоСтудентаToolStripMenuItem.Name = "додатиНовогоСтудентаToolStripMenuItem";
+            this.додатиНовогоСтудентаToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
+            this.додатиНовогоСтудентаToolStripMenuItem.Text = "Додати нового студента";
+            this.додатиНовогоСтудентаToolStripMenuItem.Click += new System.EventHandler(this.додатиНовогоСтудентаToolStripMenuItem_Click);
+            // 
+            // редагуватиСтудентаToolStripMenuItem
+            // 
+            this.редагуватиСтудентаToolStripMenuItem.Name = "редагуватиСтудентаToolStripMenuItem";
+            this.редагуватиСтудентаToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
+            this.редагуватиСтудентаToolStripMenuItem.Text = "Редагувати студента";
+            this.редагуватиСтудентаToolStripMenuItem.Click += new System.EventHandler(this.редагуватиСтудентаToolStripMenuItem_Click);
+            // 
+            // видалитиСтудентаToolStripMenuItem
+            // 
+            this.видалитиСтудентаToolStripMenuItem.Name = "видалитиСтудентаToolStripMenuItem";
+            this.видалитиСтудентаToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
+            this.видалитиСтудентаToolStripMenuItem.Text = "Видалити студента";
+            this.видалитиСтудентаToolStripMenuItem.Click += new System.EventHandler(this.видалитиСтудентаToolStripMenuItem_Click);
+            // 
+            // пошукToolStripMenuItem
+            // 
+            this.пошукToolStripMenuItem.Name = "пошукToolStripMenuItem";
+            this.пошукToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
+            this.пошукToolStripMenuItem.Text = "Пошук";
+            this.пошукToolStripMenuItem.Click += new System.EventHandler(this.пошукToolStripMenuItem_Click);
+            // 
+            // вихiдToolStripMenuItem
+            // 
+            this.вихiдToolStripMenuItem.Name = "вихiдToolStripMenuItem";
+            this.вихiдToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
+            this.вихiдToolStripMenuItem.Text = "Вихiд";
+            this.вихiдToolStripMenuItem.Click += new System.EventHandler(this.вихiдToolStripMenuItem_Click);
             // 
             // FormSolution5
             // 
@@ -346,6 +428,7 @@ namespace MyPracticeProject
             this.Text = "FormSolution5";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormSolution5_FormClosing);
             this.Load += new System.EventHandler(this.FormSolution5_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FormSolution5_MouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -353,9 +436,21 @@ namespace MyPracticeProject
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStudents)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
         }
+
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem новийФайлToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem прочитатиФайлToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem додатиУФайлToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem опрацюванняToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem вихiдToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem додатиНовогоСтудентаToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem редагуватиСтудентаToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem видалитиСтудентаToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem пошукToolStripMenuItem;
 
         private System.Windows.Forms.Label labelVariantDescription;
 

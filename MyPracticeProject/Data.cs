@@ -10,43 +10,37 @@ namespace MyPracticeProject
    {
       public struct Pal
       {
-         //monochrome
+         // dark form color & default form  underline color
          public static readonly Color RegisterFormColor = Color.FromArgb(255, 30, 30, 30); 
-         //textBox
+         // text box underline warning color
          public static readonly Color WarningColor = Color.Gold;
+         // text box underline success color
          public static readonly Color SuccessColor = Color.MediumAquamarine;
+         // text box underline error color
          public static readonly Color ErrorColor = Color.Crimson;
-         //orange
-         // public static readonly Color OrangeLight = Color.FromArgb(255, 255, 196, 96);
-         // public static readonly Color OrangeMedium = Color.FromArgb(255, 247, 174, 102);
+         // orange form color
          public static readonly Color OrangeDark = Color.FromArgb(255, 238, 145, 84);
          public static readonly Color Green = Color.FromArgb(255, 130, 164, 103);
-         public static readonly Color PurpleLight = Color.FromArgb(255, 192, 132, 183);
-         public static readonly Color PurpleDark = Color.FromArgb(255, 123, 86, 130);
       }
       
-      
-      private const String Password = "5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8";
-      //TODO only dev mode
-      public static bool hasAcess = false;
-      public const string AllowedPassword = "1234567890qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM!~@#$;^&%*(){}[];?-_";
-      public static bool isPasswordAcceptable = false;
+      // user email
       public static string Email = "susamogus@gmail.com";
+      // encoded password
+      private const String Password = "5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8";
+      // does the user have access to functions such as editing files, etc.
+      public static bool hasAcess = false;
+      // symbols allowed as password
+      public const string AllowedPassword = "1234567890qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM!~@#$;^&%*(){}[];?-_";
+      // used to check if the user can log in
+      public static bool isPasswordAcceptable = false;
 
+      // shows that user has no acess to use this function
       public static void ShowAccessRequired()
       {
          MessageBox.Show(@"У вас немає доступу до даного функцiоналу.", "Недостатнiй рiвень доступу", MessageBoxButtons.OK, MessageBoxIcon.Warning);
       }
-      public static void SetError(TextBox textBox, PictureBox pictureBox, string message, Label textEdit = null)
-      {
-         pictureBox.Image = Image.FromFile(@"D:\mwp\cs-practice\MyPracticeProject\MyPracticeProject\assets\saved-line-error.png");
-         textBox.ForeColor = Data.Pal.ErrorColor;
-         if (textEdit != null)
-         {
-            textEdit.ForeColor = Data.Pal.ErrorColor;
-            textEdit.Text = message;
-         }
-      }
+      
+      // encoding password using SHA256 method
       public static string HashPassword(string inputPassword)
       {
          using (SHA256 sha256 = SHA256.Create())
@@ -61,6 +55,7 @@ namespace MyPracticeProject
          }
       }
 
+      // checking if the password is correct
       public static bool MatchPassword(string password)
       {
          return Password == HashPassword(password);

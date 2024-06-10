@@ -12,9 +12,10 @@ namespace MyPracticeProject
 {
     public partial class FormRegistration : Form
     {
+        // TabControl init
         public FormRegistration() => InitializeComponent();
 
-
+        // default form components initialization
         private void Form1_Load(object sender, EventArgs e)
         {
             //setting colours
@@ -46,6 +47,7 @@ namespace MyPracticeProject
             textBoxEmail.Text = textBoxPassword.Text = "";
         }
         
+        // setting text box by default (black color)
         private void SetDefault(TextBox textBox, PictureBox pictureBox, Label textEdit = null)
         {
             pictureBox.Image = Image.FromFile(@"D:\mwp\cs-practice\MyPracticeProject\MyPracticeProject\assets\saved-line.png");
@@ -55,6 +57,8 @@ namespace MyPracticeProject
                 textEdit.Text = "";
             }
         }
+        
+        // setting textbox this password cannot be used
         private void SetWarning(TextBox textBox, PictureBox pictureBox, Label textEdit = null)
         {
             textBox.ForeColor = Data.Pal.WarningColor;
@@ -65,6 +69,8 @@ namespace MyPracticeProject
                 textEdit.Text = @"Розмір пароля має бути в діапазоні від 8 до 20 символів, та не повинен містити заборонених символів.";
             }
         }
+        
+        // setting textbox this password can be used
         private void SetAcceptable(TextBox textBox, PictureBox pictureBox, Label textEdit = null)
         {
             pictureBox.Image = Image.FromFile(@"D:\mwp\cs-practice\MyPracticeProject\MyPracticeProject\assets\saved-line-success.png");
@@ -75,7 +81,20 @@ namespace MyPracticeProject
                 textEdit.Text = @"Пароль підходить";
             }
         }
+        
+        // displays error to a text box
+        public static void SetError(TextBox textBox, PictureBox pictureBox, string message, Label textEdit = null)
+        {
+            pictureBox.Image = Image.FromFile(@"D:\mwp\cs-practice\MyPracticeProject\MyPracticeProject\assets\saved-line-error.png");
+            textBox.ForeColor = Data.Pal.ErrorColor;
+            if (textEdit != null)
+            {
+                textEdit.ForeColor = Data.Pal.ErrorColor;
+                textEdit.Text = message;
+            }
+        }
 
+        // analyzing password input
         private void textBoxPassword_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (int)Keys.Back)
@@ -118,17 +137,18 @@ namespace MyPracticeProject
             e.Handled = false;
         }
 
+        // setting log in button
         private void buttonLogIn_Click(object sender, EventArgs e)
         {
             bool acceptable = true;
             if (!Data.MatchPassword(textBoxPassword.Text) || !Data.isPasswordAcceptable)
             {
-                Data.SetError(textBoxPassword, pictureBoxPasswordLabel, "Пароль невірний", labelPasswordWarning);
+                SetError(textBoxPassword, pictureBoxPasswordLabel, "Пароль невірний", labelPasswordWarning);
                 acceptable = false;
             }
             if (Data.Email != textBoxEmail.Text)
             {
-                Data.SetError(textBoxEmail, pictureBoxEmailLabel, "Пошта не знайдена", labelEmailWarning);
+                SetError(textBoxEmail, pictureBoxEmailLabel, "Пошта не знайдена", labelEmailWarning);
                 acceptable = false;
             }
             else
@@ -144,6 +164,7 @@ namespace MyPracticeProject
             }
         }
 
+        // log in as guest, then user has no access to edit files
         private void buttonAsGuest_Click(object sender, EventArgs e)
         {
             Visible = false;
