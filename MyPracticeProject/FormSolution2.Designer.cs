@@ -131,7 +131,7 @@ namespace MyPracticeProject
             this.labelDigits.Name = "labelDigits";
             this.labelDigits.Size = new System.Drawing.Size(342, 32);
             this.labelDigits.TabIndex = 46;
-            this.labelDigits.Text = "Точнiсть обчислення";
+            this.labelDigits.Text = "Точнiсть виведення\r\n";
             this.labelDigits.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // pictureBox3

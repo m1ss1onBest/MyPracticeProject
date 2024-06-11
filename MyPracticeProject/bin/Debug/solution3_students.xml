@@ -24,4 +24,40 @@
     <Height>214</Height>
     <BirthDate>09.06.24</BirthDate>
   </Student>
+  <Student>
+    <LastName>Петренко</LastName>
+    <FirstName>Степан</FirstName>
+    <Height>192</Height>
+    <BirthDate>11.06.24</BirthDate>
+  </Student>
+  <Student>
+    <LastName>Авраменко</LastName>
+    <FirstName>Василь</FirstName>
+    <Height>163</Height>
+    <BirthDate>05.10.95</BirthDate>
+  </Student>
+  <Student>
+    <LastName>Степанюк</LastName>
+    <FirstName>Олег</FirstName>
+    <Height>235</Height>
+    <BirthDate>05.10.95</BirthDate>
+  </Student>
+  <Student>
+    <LastName>Вайленко</LastName>
+    <FirstName>Петро</FirstName>
+    <Height>164</Height>
+    <BirthDate>05.10.95</BirthDate>
+  </Student>
+  <Student>
+    <LastName>Стецюк</LastName>
+    <FirstName>Василь</FirstName>
+    <Height>156</Height>
+    <BirthDate>28.10.95</BirthDate>
+  </Student>
+  <Student>
+    <LastName>Амогусов</LastName>
+    <FirstName>Дмитро</FirstName>
+    <Height>176</Height>
+    <BirthDate>06.07.95</BirthDate>
+  </Student>
 </Students>

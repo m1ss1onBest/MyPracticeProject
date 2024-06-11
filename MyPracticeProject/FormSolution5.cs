@@ -60,8 +60,11 @@ namespace MyPracticeProject
         // exit form
         private void toolStrip_FILE_exit_Click(object sender, EventArgs e) => Close();
         
-        // coming back to solution manager
-        private void FormSolution5_FormClosing(object sender, FormClosingEventArgs e) => FormManager.Start();
+        // exit the application when form closed
+        private void FormSolution5_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            FormManager.Start();
+        }
         
         // default form components initialization
         private void FormSolution5_Load(object sender, EventArgs e)
@@ -77,7 +80,7 @@ namespace MyPracticeProject
 
             Text = "База даних студентiв";
             labelVariantDescription.Text =
-                "Створити і вивести на екран  масив з довільною кількістю записів (не меньше 10) по індивідуальному завданню. Записати в файл, визначити структуру файла. Знайти в файлі і вивести на екран результати обробки запитів. " +
+                "Створити і вивести на екран список з довільною кількістю записів (не меньше 10) по індивідуальному завданню. Записати в файл, визначити структуру файла. Знайти в файлі і вивести на екран результати обробки запитів. " +
                 "Програма має виводити на екран меню з командами: 1 - створення, перегляд, додавання до файлу 4 - обробка файлу( додавання, редагування, вилучення записів, пошук, обчислення). Вивести на екран студентiв зрiст i вага яких є унiкальними";
      
             // setting text boxes
@@ -378,9 +381,7 @@ namespace MyPracticeProject
 
         // selecting operation find
         private void toolStrip_FILE_STUD_find_Click(object sender, EventArgs e)
-        {
-            // Подсчет количества каждого роста
-            var heightCounts = new int[Students.Count];
+        {   var heightCounts = new int[Students.Count];
             for (int i = 0; i < Students.Count; i++)
             {
                 int count = 0;
@@ -486,5 +487,6 @@ namespace MyPracticeProject
                 contextMenuStrip1.Show(this, e.Location);
             }
         }
+        
     }
 }

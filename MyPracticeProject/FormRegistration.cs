@@ -159,7 +159,7 @@ namespace MyPracticeProject
             if (acceptable)
             {
                 Visible = false;
-                FormManager.Start();
+                FormSolution5.Start();
                 Data.hasAcess = true;
             }
         }

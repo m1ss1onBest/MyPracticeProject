@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="windows-1251" standalone="yes"?>
+<Students>
+  <Student>
+    <FullName>Тестовий запис 1</FullName>
+    <Age>20</Age>
+    <Height>150</Height>
+    <Weight>60</Weight>
+  </Student>
+  <Student>
+    <FullName>Тестовий запис 2</FullName>
+    <Age>20</Age>
+    <Height>150</Height>
+    <Weight>60</Weight>
+  </Student>
+  <Student>
+    <FullName>Тестовий запис 3</FullName>
+    <Age>20</Age>
+    <Height>150</Height>
+    <Weight>60</Weight>
+  </Student>
+  <Student>
+    <FullName>Тестовий запис 4</FullName>
+    <Age>20</Age>
+    <Height>150</Height>
+    <Weight>60</Weight>
+  </Student>
+  <Student>
+    <FullName>Тестовий запис 5</FullName>
+    <Age>20</Age>
+    <Height>150</Height>
+    <Weight>60</Weight>
+  </Student>
+  <Student>
+    <FullName>Тестовий запис 6</FullName>
+    <Age>20</Age>
+    <Height>150</Height>
+    <Weight>60</Weight>
+  </Student>
+  <Student>
+    <FullName>Тестовий запис 7</FullName>
+    <Age>20</Age>
+    <Height>150</Height>
+    <Weight>60</Weight>
+  </Student>
+  <Student>
+    <FullName>Тестовий запис 8</FullName>
+    <Age>20</Age>
+    <Height>150</Height>
+    <Weight>60</Weight>
+  </Student>
+  <Student>
+    <FullName>Тестовий запис 9</FullName>
+    <Age>20</Age>
+    <Height>150</Height>
+    <Weight>60</Weight>
+  </Student>
+  <Student>
+    <FullName>Тестовий запис 10</FullName>
+    <Age>20</Age>
+    <Height>150</Height>
+    <Weight>60</Weight>
+  </Student>
+</Students>
